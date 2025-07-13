@@ -1,0 +1,259 @@
+/* Dynamic Theme System - Works with Firebase Remote Config */
+
+/* CSS Custom Properties that can be overridden by Firebase */
+:root {
+  /* Colors - Configurable via Remote Config */
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #8b5cf6;
+  --accent: #22c55e;
+  
+  /* Neutral Colors */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-900: #111827;
+  --white: #ffffff;
+  --text-color: #111827;
+  --background: #ffffff;
+  
+  /* Typography - Configurable */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading-font-size: 3.5rem;
+  --body-font-size: 1rem;
+  
+  /* Layout - Configurable */
+  --container-max: 1200px;
+  --section-padding: 5rem 0;
+  --border-radius: 0.5rem;
+  
+  /* Animation Settings */
+  --transition-speed: 0.3s;
+  --animation-enabled: 1;
+}
+
+/* Dark Mode Theme */
+.dark-mode {
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --secondary: #a855f7;
+  --accent: #34d399;
+  --gray-50: #1f2937;
+  --gray-100: #374151;
+  --gray-900: #f9fafb;
+  --white: #111827;
+  --text-color: #f9fafb;
+  --background: #111827;
+}
+
+/* Mood-based themes (can be activated via Remote Config) */
+.mood-happy {
+  --primary: #fbbf24;
+  --primary-dark: #f59e0b;
+  --secondary: #fb923c;
+  --accent: #34d399;
+}
+
+.mood-focused {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #8b5cf6;
+  --accent: #06b6d4;
+}
+
+.mood-creative {
+  --primary: #ec4899;
+  --primary-dark: #db2777;
+  --secondary: #f97316;
+  --accent: #8b5cf6;
+}
+
+.mood-calm {
+  --primary: #06b6d4;
+  --primary-dark: #0891b2;
+  --secondary: #0ea5e9;
+  --accent: #10b981;
+}
+
+/* Disable animations if configured */
+.no-animations * {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+/* Dynamic font sizing */
+.dynamic-typography h1 {
+  font-size: var(--heading-font-size);
+}
+
+.dynamic-typography body,
+.dynamic-typography p {
+  font-size: var(--body-font-size);
+}
+
+/* Configurable layout */
+.dynamic-layout .container {
+  max-width: var(--container-max);
+}
+
+.dynamic-layout .about,
+.dynamic-layout .investors {
+  padding: var(--section-padding);
+}
+
+/* A/B Test Variants */
+.hero-variant-emotional .hero-title {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.cta-variant-urgent .btn-primary {
+  animation: pulseUrgent 1.5s ease-in-out infinite;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulseUrgent {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Remote Config Responsive Overrides */
+@media (max-width: 768px) {
+  :root {
+    --heading-font-size: 2.5rem;
+    --section-padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --heading-font-size: 2rem;
+    --section-padding: 2rem 0;
+  }
+}
+
+/* Maintenance Mode Styles */
+.maintenance-mode {
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+/* Announcement Banner Styles */
+.has-announcement {
+  margin-top: 60px;
+}
+
+/* Admin Panel Styles */
+#admin-panel {
+  font-family: 'Courier New', monospace !important;
+  background: var(--white) !important;
+  color: var(--text-color) !important;
+  border: 2px solid var(--primary) !important;
+}
+
+#admin-panel button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#admin-panel button:hover {
+  background: var(--primary-dark);
+}
+
+/* Loading States */
+.config-loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.config-loading::after {
+  content: '⏳ Loading configuration...';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+/* Dynamic Color Transitions */
+* {
+  transition: 
+    background-color calc(var(--transition-speed) * var(--animation-enabled)),
+    color calc(var(--transition-speed) * var(--animation-enabled)),
+    border-color calc(var(--transition-speed) * var(--animation-enabled));
+}
+
+/* Firebase Remote Config Success Indicator */
+.config-loaded::before {
+  content: '🔥';
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: var(--accent);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+/* Error States */
+.config-error {
+  border: 2px solid #ef4444;
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Theme Toggle Button Enhancement */
+.theme-toggle {
+  background: var(--primary) !important;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--primary-dark) !important;
+  transform: scale(1.1);
+}
+
+/* Dynamic Content Highlighting */
+.dynamic-content {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.dynamic-content.updating {
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

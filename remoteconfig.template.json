@@ -1,0 +1,135 @@
+{
+  "conditions": [
+    {
+      "name": "maintenance_mode",
+      "expression": "false"
+    },
+    {
+      "name": "beta_users",
+      "expression": "user.userProperty['beta_user'] == 'true'"
+    }
+  ],
+  "parameters": {
+    "primary_color": {
+      "defaultValue": {
+        "value": "#6366f1"
+      },
+      "description": "Primary brand color for the website"
+    },
+    "secondary_color": {
+      "defaultValue": {
+        "value": "#8b5cf6"
+      },
+      "description": "Secondary brand color"
+    },
+    "accent_color": {
+      "defaultValue": {
+        "value": "#22c55e"
+      },
+      "description": "Accent color for highlights and CTAs"
+    },
+    "hero_title": {
+      "defaultValue": {
+        "value": "Emotionally Intelligent\nDeveloper Tools"
+      },
+      "description": "Main hero title text"
+    },
+    "hero_subtitle": {
+      "defaultValue": {
+        "value": "Pioneering vibe coding – where human creativity meets AI intelligence. VibeStudio is the first mood-adaptive IDE that evolves with your emotional state."
+      },
+      "description": "Hero subtitle/description text"
+    },
+    "cta_text": {
+      "defaultValue": {
+        "value": "Launch VibeStudio"
+      },
+      "description": "Primary call-to-action button text"
+    },
+    "enable_dark_mode": {
+      "defaultValue": {
+        "value": "true"
+      },
+      "description": "Enable dark mode toggle button"
+    },
+    "enable_animations": {
+      "defaultValue": {
+        "value": "true"
+      },
+      "description": "Enable CSS animations and transitions"
+    },
+    "maintenance_mode": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "conditionalValues": {
+        "maintenance_mode": {
+          "value": "true"
+        }
+      },
+      "description": "Enable maintenance mode overlay"
+    },
+    "announcement_banner": {
+      "defaultValue": {
+        "value": ""
+      },
+      "description": "Announcement banner text (empty to hide)"
+    },
+    "font_family": {
+      "defaultValue": {
+        "value": "Inter"
+      },
+      "description": "Primary font family"
+    },
+    "container_max_width": {
+      "defaultValue": {
+        "value": "1200px"
+      },
+      "description": "Maximum container width"
+    },
+    "show_beta_features": {
+      "defaultValue": {
+        "value": "false"
+      },
+      "conditionalValues": {
+        "beta_users": {
+          "value": "true"
+        }
+      },
+      "description": "Show beta features and admin panel"
+    },
+    "hero_variant": {
+      "defaultValue": {
+        "value": "default"
+      },
+      "description": "A/B test variant for hero section (default, emotional)"
+    },
+    "cta_variant": {
+      "defaultValue": {
+        "value": "default"
+      },
+      "description": "A/B test variant for CTA buttons (default, urgent)"
+    },
+    "mood_theme": {
+      "defaultValue": {
+        "value": "default"
+      },
+      "description": "Active mood theme (default, happy, focused, creative, calm)"
+    },
+    "app_version": {
+      "defaultValue": {
+        "value": "1.0.0"
+      },
+      "description": "Current application version"
+    }
+  },
+  "version": {
+    "versionNumber": "1",
+    "updateTime": "2025-01-13T12:00:00Z",
+    "updateUser": {
+      "email": "hello@lockard.llc"
+    },
+    "updateOrigin": "ADMIN_SDK_NODE",
+    "updateType": "INCREMENTAL_UPDATE"
+  }
+}

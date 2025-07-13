@@ -1,0 +1,27 @@
+{
+  "name": "lockard-LLC",
+  "version": "1.0.0",
+  "description": "Lockard LLC",
+  "scripts": {
+    "dev": "firebase serve --only hosting",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "firebase deploy --only hosting",
+    "deploy:all": "firebase deploy",
+    "serve": "firebase serve",
+    "lint": "echo 'Add linting when needed'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lockard-LLC/lockard-llc.git"
+  },
+  "keywords": [
+    "developer-tools",
+    "emotional-intelligence",
+    "ai",
+    "ide",
+    "vibe-coding"
+  ],
+  "author": "Lockard LLC",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://lockard.llc"
+}
