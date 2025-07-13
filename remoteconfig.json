@@ -2,11 +2,13 @@
   "conditions": [
     {
       "name": "maintenance_mode",
-      "expression": "false"
+      "expression": "app.userProperty['maintenance'] == 'true'",
+      "tagColor": "RED"
     },
     {
       "name": "beta_users",
-      "expression": "user.userProperty['beta_user'] == 'true'"
+      "expression": "app.userProperty['beta_user'] == 'true'",
+      "tagColor": "BLUE"
     }
   ],
   "parameters": {
@@ -14,49 +16,57 @@
       "defaultValue": {
         "value": "#6366f1"
       },
-      "description": "Primary brand color for the website"
+      "description": "Primary brand color for the website",
+      "valueType": "STRING"
     },
     "secondary_color": {
       "defaultValue": {
         "value": "#8b5cf6"
       },
-      "description": "Secondary brand color"
+      "description": "Secondary brand color",
+      "valueType": "STRING"
     },
     "accent_color": {
       "defaultValue": {
         "value": "#22c55e"
       },
-      "description": "Accent color for highlights and CTAs"
+      "description": "Accent color for highlights and CTAs",
+      "valueType": "STRING"
     },
     "hero_title": {
       "defaultValue": {
         "value": "Emotionally Intelligent\nDeveloper Tools"
       },
-      "description": "Main hero title text"
+      "description": "Main hero title text",
+      "valueType": "STRING"
     },
     "hero_subtitle": {
       "defaultValue": {
         "value": "Pioneering vibe coding – where human creativity meets AI intelligence. VibeStudio is the first mood-adaptive IDE that evolves with your emotional state."
       },
-      "description": "Hero subtitle/description text"
+      "description": "Hero subtitle/description text",
+      "valueType": "STRING"
     },
     "cta_text": {
       "defaultValue": {
         "value": "Launch VibeStudio"
       },
-      "description": "Primary call-to-action button text"
+      "description": "Primary call-to-action button text",
+      "valueType": "STRING"
     },
     "enable_dark_mode": {
       "defaultValue": {
         "value": "true"
       },
-      "description": "Enable dark mode toggle button"
+      "description": "Enable dark mode toggle button",
+      "valueType": "BOOLEAN"
     },
     "enable_animations": {
       "defaultValue": {
         "value": "true"
       },
-      "description": "Enable CSS animations and transitions"
+      "description": "Enable CSS animations and transitions",
+      "valueType": "BOOLEAN"
     },
     "maintenance_mode": {
       "defaultValue": {
@@ -67,25 +77,29 @@
           "value": "true"
         }
       },
-      "description": "Enable maintenance mode overlay"
+      "description": "Enable maintenance mode overlay",
+      "valueType": "BOOLEAN"
     },
     "announcement_banner": {
       "defaultValue": {
         "value": ""
       },
-      "description": "Announcement banner text (empty to hide)"
+      "description": "Announcement banner text (empty to hide)",
+      "valueType": "STRING"
     },
     "font_family": {
       "defaultValue": {
         "value": "Inter"
       },
-      "description": "Primary font family"
+      "description": "Primary font family",
+      "valueType": "STRING"
     },
     "container_max_width": {
       "defaultValue": {
         "value": "1200px"
       },
-      "description": "Maximum container width"
+      "description": "Maximum container width",
+      "valueType": "STRING"
     },
     "show_beta_features": {
       "defaultValue": {
@@ -96,31 +110,36 @@
           "value": "true"
         }
       },
-      "description": "Show beta features and admin panel"
+      "description": "Show beta features and admin panel",
+      "valueType": "BOOLEAN"
     },
     "hero_variant": {
       "defaultValue": {
         "value": "default"
       },
-      "description": "A/B test variant for hero section (default, emotional)"
+      "description": "A/B test variant for hero section (default, emotional)",
+      "valueType": "STRING"
     },
     "cta_variant": {
       "defaultValue": {
         "value": "default"
       },
-      "description": "A/B test variant for CTA buttons (default, urgent)"
+      "description": "A/B test variant for CTA buttons (default, urgent)",
+      "valueType": "STRING"
     },
     "mood_theme": {
       "defaultValue": {
         "value": "default"
       },
-      "description": "Active mood theme (default, happy, focused, creative, calm)"
+      "description": "Active mood theme (default, happy, focused, creative, calm)",
+      "valueType": "STRING"
     },
     "app_version": {
       "defaultValue": {
         "value": "1.0.0"
       },
-      "description": "Current application version"
+      "description": "Current application version",
+      "valueType": "STRING"
     }
   },
   "version": {
@@ -130,6 +149,7 @@
       "email": "hello@lockard.llc"
     },
     "updateOrigin": "ADMIN_SDK_NODE",
-    "updateType": "INCREMENTAL_UPDATE"
+    "updateType": "INCREMENTAL_UPDATE",
+    "description": "Initial Firebase Remote Config setup for Lockard LLC website"
   }
 }
