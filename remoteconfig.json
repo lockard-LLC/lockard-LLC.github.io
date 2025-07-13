@@ -2,13 +2,11 @@
   "conditions": [
     {
       "name": "maintenance_mode",
-      "expression": "app.userProperty['maintenance'] == 'true'",
-      "tagColor": "RED"
+      "expression": "percent <= 0"
     },
     {
       "name": "beta_users",
-      "expression": "app.userProperty['beta_user'] == 'true'",
-      "tagColor": "BLUE"
+      "expression": "percent <= 10"
     }
   ],
   "parameters": {
@@ -143,13 +141,13 @@
     }
   },
   "version": {
-    "versionNumber": "1",
-    "updateTime": "2025-01-13T12:00:00Z",
+    "versionNumber": 2,
+    "updateTime": "2025-07-13T12:00:00Z",
     "updateUser": {
       "email": "hello@lockard.llc"
     },
     "updateOrigin": "ADMIN_SDK_NODE",
     "updateType": "INCREMENTAL_UPDATE",
-    "description": "Initial Firebase Remote Config setup for Lockard LLC website"
+    "description": "Firebase Remote Config setup for Lockard LLC website - July 2025"
   }
 }

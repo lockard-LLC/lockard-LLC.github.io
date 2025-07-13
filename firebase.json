@@ -48,6 +48,15 @@
           ]
         }
       ]
+    },
+    {
+      "public": "docs",
+      "site": "docs-lockard-llc",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
     }
   ],
   "storage": {
@@ -57,6 +66,7 @@
     "template": "remoteconfig.json"
   },
   "firestore": {
+    "database": "lockard-db",
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
