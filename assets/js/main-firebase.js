@@ -1,22 +1,28 @@
 // Lockard LLC Website JavaScript with Firebase Integration
 
-// Import Firebase configuration
-import LockardConfig from './firebase-config.js';
+// Import comprehensive Firebase services
+import LockardServices from './firebase-services.js';
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', async function() {
     
-    // Initialize Firebase Remote Config
-    await LockardConfig.initialize();
+    // Wait for Firebase services to initialize
+    while (!LockardServices.initialized) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+    }
     
-    // Track page view
-    LockardConfig.trackEvent('page_view', {
+    // Track page view with enhanced data
+    LockardServices.trackEvent('page_view', {
         page_title: document.title,
-        page_location: window.location.href
+        page_location: window.location.href,
+        referrer: document.referrer,
+        user_agent: navigator.userAgent,
+        viewport_width: window.innerWidth,
+        viewport_height: window.innerHeight
     });
     
     // Listen for config changes
-    LockardConfig.onChange((newConfig) => {
+    LockardServices.onChange((newConfig) => {
         console.log('🔄 Configuration updated:', newConfig);
         applyDynamicChanges(newConfig);
     });
@@ -33,8 +39,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                 });
                 
                 // Track scroll events
-                LockardConfig.trackEvent('scroll_to_section', {
-                    section: this.getAttribute('href')
+                LockardServices.trackEvent('scroll_to_section', {
+                    section: this.getAttribute('href'),
+                    from_page: window.location.pathname
                 });
             }
         });
@@ -61,7 +68,10 @@ document.addEventListener('DOMContentLoaded', async function() {
     if (mobileMenuButton && navLinks) {
         mobileMenuButton.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            LockardConfig.trackEvent('mobile_menu_toggle');
+            LockardServices.trackEvent('mobile_menu_toggle', {
+                page: window.location.pathname,
+                timestamp: new Date().toISOString()
+            });
         });
     }
 
@@ -71,12 +81,15 @@ document.addEventListener('DOMContentLoaded', async function() {
             const buttonText = this.textContent.trim();
             const isExternal = this.href && (this.href.startsWith('mailto:') || this.href.includes('vibestudio.online') || this.href.startsWith('http'));
             
-            // Track button clicks with Firebase Analytics
-            LockardConfig.trackEvent('button_click', {
+            // Track button clicks with comprehensive Firebase Analytics
+            LockardServices.trackEvent('button_click', {
                 button_text: buttonText,
                 button_type: this.classList.contains('btn-primary') ? 'primary' : 'secondary',
                 is_external: isExternal,
-                page_section: getPageSection(this)
+                page_section: getPageSection(this),
+                page_url: window.location.href,
+                click_coordinates: `${event.clientX},${event.clientY}`,
+                timestamp: new Date().toISOString()
             });
             
             // Don't animate external links

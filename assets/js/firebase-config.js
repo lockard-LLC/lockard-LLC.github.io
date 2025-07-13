@@ -4,15 +4,15 @@ import { getRemoteConfig, fetchAndActivate, getValue } from 'https://www.gstatic
 import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
 import { getFirestore, doc, getDoc, collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
-// Firebase configuration
+// Firebase configuration - Updated with real Lockard LLC credentials
 const firebaseConfig = {
-  apiKey: "your_firebase_api_key_here",
+  apiKey: "AIzaSyDMuyqu8Sp_7UNWYlAfdW6gBdT7fR0DBJA",
   authDomain: "lockard-llc.firebaseapp.com", 
   projectId: "lockard-llc",
-  storageBucket: "lockard-llc.appspot.com",
-  messagingSenderId: "your_sender_id_here",
-  appId: "your_app_id_here",
-  measurementId: "G-XXXXXXXXXX"
+  storageBucket: "lockard-llc.firebasestorage.app",
+  messagingSenderId: "207878838967",
+  appId: "1:207878838967:web:1b1e56f8f7d53960c74b32",
+  measurementId: "G-JH3BY1QB52"
 };
 
 // Initialize Firebase

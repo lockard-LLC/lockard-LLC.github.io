@@ -1,55 +1,71 @@
 {
-  "hosting": {
-    "public": ".",
-    "site": "lockard-llc",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "docs/**",
-      "examples/**",
-      ".env*",
-      "README.md",
-      "functions/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
-    "headers": [
-      {
-        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "*"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=7200"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(js|css)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=3600"
-          }
-        ]
-      }
-    ]
+  "hosting": [
+    {
+      "target": "main",
+      "public": ".",
+      "site": "lockard-llc",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "docs/**",
+        "examples/**",
+        ".env*",
+        "README.md",
+        "functions/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=7200"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=3600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "app",
+      "public": "app-build",
+      "site": "app-lockard-llc",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  ],
+  "storage": {
+    "rules": "storage.rules"
   },
   "remoteconfig": {
-    "template": "remoteconfig.template.json"
+    "template": "remoteconfig.json"
   },
   "firestore": {
     "rules": "firestore.rules",
@@ -59,6 +75,26 @@
     "source": "functions",
     "predeploy": [
       "npm --prefix \"$RESOURCE_DIR\" run build"
-    ]
+    ],
+    "runtime": "nodejs18"
+  },
+  "emulators": {
+    "hosting": {
+      "port": 5000
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "storage": {
+      "port": 9199
+    },
+    "functions": {
+      "port": 5001
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4000
+    },
+    "singleProjectMode": true
   }
 }
