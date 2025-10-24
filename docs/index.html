@@ -3,209 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lockard LLC - Emotionally Intelligent Developer Tools</title>
-    <meta name="description" content="Pioneering vibe coding and emotionally intelligent developer tools. VibeStudio is the first mood-adaptive IDE that enhances human creativity with AI.">
-    
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Lockard LLC - Emotionally Intelligent Developer Tools">
-    <meta property="og:description" content="Pioneering vibe coding with VibeStudio, the first mood-adaptive IDE">
-    <meta property="og:url" content="https://lockard.llc">
-    <meta property="og:image" content="https://lockard.llc/assets/images/og-image.jpg">
-    
-    <!-- Technical Meta -->
-    <link rel="canonical" href="https://lockard.llc">
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    
-    <!-- Styles -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    
-    <!-- Fonts -->
+    <title>Lockard LLC · Notes</title>
+    <meta name="description" content="Working notes and staged updates from Lockard LLC.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            color-scheme: light dark;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 4rem 1.5rem;
+            background: radial-gradient(circle at 30% 20%, rgba(125, 211, 252, 0.2), transparent 55%),
+                        radial-gradient(circle at 80% 10%, rgba(244, 114, 182, 0.18), transparent 55%),
+                        #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main {
+            max-width: 720px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            border-radius: 18px;
+            padding: 3rem;
+            box-shadow: 0 35px 70px -30px rgba(15, 23, 42, 0.65);
+        }
+        h1 {
+            font-size: clamp(2.2rem, 4vw, 2.9rem);
+            margin-bottom: 0.75rem;
+            color: #e0f2fe;
+        }
+        p {
+            line-height: 1.65;
+            color: #cbd5f5;
+        }
+        .tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #38bdf8;
+            margin-bottom: 1.75rem;
+        }
+        ul {
+            margin: 2rem 0 0;
+            padding-left: 1rem;
+            color: #94a3b8;
+        }
+        a {
+            color: #38bdf8;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>🎵</span>
-                <span>Lockard LLC</span>
-            </div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="vibestudio.html">VibeStudio</a>
-                <a href="vibe-coding.html">Vibe Coding</a>
-                <a href="#investors">Investors</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="nav-cta">
-                <a href="https://app.vibestudio.online" class="btn-primary">Try VibeStudio</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Emotionally Intelligent<br>
-                    <span class="text-gradient">Developer Tools</span>
-                </h1>
-                <p class="hero-description">
-                    Pioneering <strong>vibe coding</strong> – where human creativity meets AI intelligence. 
-                    VibeStudio is the first mood-adaptive IDE that evolves with your emotional state.
-                </p>
-                <div class="hero-actions">
-                    <a href="https://app.vibestudio.online" class="btn-primary large">
-                        Launch VibeStudio
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M7 17l10-10M17 7v10h-10" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
-                    <a href="vibe-coding.html" class="btn-secondary large">
-                        Learn Vibe Coding
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">$26B</span>
-                        <span class="stat-label">Market Opportunity</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">97%</span>
-                        <span class="stat-label">Developers Using AI</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">1st</span>
-                        <span class="stat-label">Mood-Adaptive IDE</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="demo-placeholder">
-                    <h3>🎨 VibeStudio Demo</h3>
-                    <p>Mood-adaptive IDE that changes with your emotional state</p>
-                    <div class="demo-features">
-                        <div class="feature">😊 Happy Mode</div>
-                        <div class="feature">🎯 Focus Mode</div>
-                        <div class="feature">🎨 Creative Flow</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Pioneering the Future of Software Development</h2>
-            <p class="section-intro">
-                Lockard LLC is revolutionizing how developers interact with AI through emotionally intelligent tools 
-                that enhance human creativity and promote digital wellness.
-            </p>
-            
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">🧠</div>
-                    <h3>Emotional Intelligence</h3>
-                    <p>Real-time mood detection and adaptive interfaces that respond to your emotional state.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🤖</div>
-                    <h3>AI Collaboration</h3>
-                    <p>Human-AI co-creation that enhances creativity without replacing human intuition.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🧘</div>
-                    <h3>Digital Wellness</h3>
-                    <p>Calm tech principles that promote mental health and sustainable development practices.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">♿</div>
-                    <h3>Inclusive Design</h3>
-                    <p>Neurodivergent-friendly interfaces designed for diverse cognitive styles and needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Investors Section -->
-    <section id="investors" class="investors">
-        <div class="container">
-            <h2>Investment Opportunity</h2>
-            <p class="section-intro">
-                Join us in revolutionizing the $26B developer tools market with emotionally intelligent AI.
-            </p>
-            
-            <div class="investment-highlights">
-                <div class="highlight">
-                    <h3>Unique Market Position</h3>
-                    <p>First-mover advantage in emotional intelligence for developer tools</p>
-                </div>
-                <div class="highlight">
-                    <h3>Proven Technology</h3>
-                    <p>Working prototype with strong technical foundation and user validation</p>
-                </div>
-                <div class="highlight">
-                    <h3>Massive Opportunity</h3>
-                    <p>$26B market growing at 27.1% CAGR with 97% developer AI adoption</p>
-                </div>
-            </div>
-            
-            <div class="investor-cta">
-                <a href="mailto:hello@lockard.llc?subject=Investment Inquiry" class="btn-primary">Request Pitch Deck</a>
-                <a href="company/INVESTORS.md" class="btn-secondary">Investment Details</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span style="font-size: 2rem;">🎵</span>
-                    <p>Pioneering emotionally intelligent developer tools</p>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Products</h4>
-                        <a href="vibestudio.html">VibeStudio</a>
-                        <a href="vibe-coding.html">Vibe Coding</a>
-                        <a href="https://app.vibestudio.online">Try Now</a>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>Company</h4>
-                        <a href="about.html">About</a>
-                        <a href="company/TEAM.md">Team</a>
-                        <a href="company/INVESTORS.md">Investors</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>Legal</h4>
-                        <a href="legal/PRIVACY.md">Privacy</a>
-                        <a href="legal/TERMS.md">Terms</a>
-                        <a href="legal/SECURITY.md">Security</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Lockard LLC. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="mailto:hello@lockard.llc">Email</a>
-                    <a href="https://linkedin.com/company/lockard-llc">LinkedIn</a>
-                    <a href="https://twitter.com/LockardLLC">Twitter</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
+    <main>
+        <div class="tagline">Lockard LLC · Studio Notes</div>
+        <h1>Work in Quiet Progress</h1>
+        <p>
+            Thanks for stopping by. We are reshaping our documentation space so it can share research memos,
+            architecture sketches, and lightweight guides as they are ready. For now, this page is a placeholder.
+        </p>
+        <p>
+            Looking for something specific? Reach out at <a href="mailto:hello@lockard.llc">hello@lockard.llc</a>
+            and we will gladly point you in the right direction.
+        </p>
+        <ul>
+            <li>Upcoming: orientation for collaborators, service frameworks, resource library.</li>
+            <li>Transparency reports and changelogs will land here first.</li>
+            <li>Want early access? Introduce yourself and we will keep you posted.</li>
+        </ul>
+    </main>
 </body>
 </html>

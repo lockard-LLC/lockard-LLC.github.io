@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add loading animation to buttons
     document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
-        button.addEventListener('click', function(e) {
-            // Don't prevent default for external links
-            if (!this.href || this.href.startsWith('mailto:') || this.href.includes('vibestudio.online')) {
+        button.addEventListener('click', function() {
+            // Skip visual feedback for mailto and external links
+            if (!this.href || this.href.startsWith('mailto:') || this.href.startsWith('http')) {
                 return;
             }
             
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Console message for developers
-    console.log('🎵 Welcome to Lockard LLC! Interested in joining our team? Email us at hello@lockard.llc');
-    console.log('💻 We love developers who view source! Check out our open positions.');
+    console.log('✨ Welcome to Lockard LLC. Curious collaborators are always invited to reach out via hello@lockard.llc');
+    console.log('🛠️ Building quietly? Let us know what you discover.');
     
 });

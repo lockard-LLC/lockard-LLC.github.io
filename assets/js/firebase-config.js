@@ -4,22 +4,26 @@ import { getRemoteConfig, fetchAndActivate, getValue } from 'https://www.gstatic
 import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
 import { getFirestore, doc, getDoc, collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
-// Firebase configuration - Updated with real Lockard LLC credentials
-const firebaseConfig = {
-  apiKey: "AIzaSyDMuyqu8Sp_7UNWYlAfdW6gBdT7fR0DBJA",
-  authDomain: "lockard-llc.firebaseapp.com", 
-  projectId: "lockard-llc",
-  storageBucket: "lockard-llc.firebasestorage.app",
-  messagingSenderId: "207878838967",
-  appId: "1:207878838967:web:1b1e56f8f7d53960c74b32",
-  measurementId: "G-JH3BY1QB52"
-};
+// Firebase configuration supplied via firebase/config.js
+const firebaseConfig = window.__FIREBASE_CONFIG__ || {};
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const remoteConfig = getRemoteConfig(app);
-const db = getFirestore(app);
+if (!firebaseConfig.apiKey) {
+  console.warn('Firebase config is missing. Ensure firebase/config.js is present before loading firebase-config.js.');
+}
+
+let app;
+let analytics;
+let remoteConfig;
+let db;
+
+if (firebaseConfig.apiKey) {
+  app = initializeApp(firebaseConfig);
+  analytics = getAnalytics(app);
+  remoteConfig = getRemoteConfig(app);
+  db = getFirestore(app);
+} else {
+  throw new Error('Firebase configuration not found. Load firebase/config.js before firebase-config.js.');
+}
 
 // Remote Config defaults
 const remoteConfigDefaults = {
@@ -46,16 +50,16 @@ const remoteConfigDefaults = {
   enable_mood_theming: true,
   
   // Content
-  hero_title: 'Emotionally Intelligent Developer Tools',
-  hero_subtitle: 'Pioneering vibe coding – where human creativity meets AI intelligence.',
-  cta_text: 'Launch VibeStudio',
+  hero_title: 'Thoughtful Software Experiments',
+  hero_subtitle: 'Exploring human-centered tooling, mindful technology practices, and collaborative workflows.',
+  cta_text: 'Connect with Us',
   
   // Branding
   logo_url: '/assets/images/logo.svg',
   favicon_url: '/assets/images/favicon.svg',
   
   // External Links
-  app_url: 'https://app.vibestudio.online',
+  app_url: '',
   docs_url: 'https://docs.lockard.llc',
   
   // A/B Testing

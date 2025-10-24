@@ -77,9 +77,9 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Enhanced button interactions with Firebase tracking
     document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function(event) {
             const buttonText = this.textContent.trim();
-            const isExternal = this.href && (this.href.startsWith('mailto:') || this.href.includes('vibestudio.online') || this.href.startsWith('http'));
+            const isExternal = this.href && (this.href.startsWith('mailto:') || this.href.startsWith('http'));
             
             // Track button clicks with comprehensive Firebase Analytics
             LockardServices.trackEvent('button_click', {

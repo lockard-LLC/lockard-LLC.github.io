@@ -33,21 +33,21 @@
     },
     "hero_title": {
       "defaultValue": {
-        "value": "Emotionally Intelligent\nDeveloper Tools"
+        "value": "Thoughtful Software\nExperiments"
       },
       "description": "Main hero title text",
       "valueType": "STRING"
     },
     "hero_subtitle": {
       "defaultValue": {
-        "value": "Pioneering vibe coding – where human creativity meets AI intelligence. VibeStudio is the first mood-adaptive IDE that evolves with your emotional state."
+        "value": "Lockard LLC explores human-centered tooling, mindful technology practices, and collaborative workflows."
       },
       "description": "Hero subtitle/description text",
       "valueType": "STRING"
     },
     "cta_text": {
       "defaultValue": {
-        "value": "Launch VibeStudio"
+        "value": "Connect with Us"
       },
       "description": "Primary call-to-action button text",
       "valueType": "STRING"

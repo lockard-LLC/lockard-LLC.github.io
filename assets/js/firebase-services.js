@@ -9,15 +9,10 @@ import { getMessaging, getToken, onMessage } from 'https://www.gstatic.com/fireb
 import { getPerformance, trace } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-performance.js';
 
 // Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDMuyqu8Sp_7UNWYlAfdW6gBdT7fR0DBJA",
-  authDomain: "lockard-llc.firebaseapp.com",
-  projectId: "lockard-llc",
-  storageBucket: "lockard-llc.firebasestorage.app",
-  messagingSenderId: "207878838967",
-  appId: "1:207878838967:web:1b1e56f8f7d53960c74b32",
-  measurementId: "G-JH3BY1QB52"
-};
+const firebaseConfig = window.__FIREBASE_CONFIG__ || {};
+if (!firebaseConfig.apiKey) {
+  throw new Error('Firebase configuration not found. Load firebase/config.js before firebase-services.js.');
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -128,9 +123,9 @@ class LockardFirebaseServices {
       enable_realtime_sync: true,
       
       // Content
-      hero_title: 'Emotionally Intelligent Developer Tools',
-      hero_subtitle: 'Pioneering vibe coding – where human creativity meets AI intelligence.',
-      cta_text: 'Launch VibeStudio',
+      hero_title: 'Thoughtful Software Experiments',
+      hero_subtitle: 'Exploring human-centered tooling, mindful technology practices, and collaborative workflows.',
+      cta_text: 'Connect with Us',
       announcement_banner: '',
       
       // App Configuration

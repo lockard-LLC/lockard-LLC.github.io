@@ -1,164 +1,210 @@
 <div align="center">
-  <img src="docs/assets/images/logo.svg" alt="Lockard LLC" width="200"/>
-  
+  <img src="assets/images/favicon.svg" alt="Lockard LLC" width="96"/>
+
   # Lockard LLC
-  
-  **Pioneering Emotionally Intelligent Developer Tools**
-  
+
+  **A parent company dedicated to advocacy-driven technology — restoring stability, safety, and dignity through lived experience**
+
   [![Website](https://img.shields.io/badge/website-lockard.llc-blue)](https://lockard.llc)
-  [![VibeStudio](https://img.shields.io/badge/product-VibeStudio-purple)](https://vibestudio.online)
+  [![Docs](https://img.shields.io/badge/docs-documentation-lightgrey)](https://docs.lockard.llc)
   [![License](https://img.shields.io/badge/license-Business-green)](LICENSE)
-  [![Founded](https://img.shields.io/badge/founded-2025-orange)](https://lockard.llc)
-  
-  [🌐 Website](https://lockard.llc) • [📱 VibeStudio](https://vibestudio.online) • [📧 Contact](mailto:hello@lockard.llc) • [💼 Investors](https://lockard.llc/investors)
 </div>
 
 ---
 
-## About Lockard LLC
+## About
 
-Lockard LLC is a Kentucky-based technology company building the future of human-AI collaboration in software development. We're pioneering **"vibe coding"** – a revolutionary approach that integrates emotional intelligence and AI to create deeply personal, adaptive development environments.
+I founded **Lockard LLC** after surviving more than a decade of domestic violence, systemic neglect, and the long, unseen process of rebuilding from the ground up.  
+What began as a personal act of survival has become a parent company dedicated to transforming lived experience into accessible, ethical technology for people in crisis.
 
-### 🎯 Our Mission
-To revolutionize software development by creating emotionally intelligent tools that enhance human creativity and well-being.
+**Lockard LLC** serves as an umbrella organization that develops and incubates specialized companies and projects, each bringing empathy, structure, and transparency to systems that too often fail those they're meant to protect.  
+Headquartered in Kentucky, our work blends **social innovation**, **human-centered design**, and **ethical engineering** to build technology that restores trust — not just efficiency.
 
-### 🚀 Our Flagship Product: VibeStudio
+**Our mission:** Transform lived experience into infrastructure for dignity through purpose-built companies and projects.
 
-**VibeStudio** is the world's first mood-adaptive web IDE that uses AI to create a deeply personal, emotionally intelligent development environment. It represents the cutting edge of "vibe coding" – where developers and AI co-create software in a state of enhanced creative flow.
+---
 
-**Key Features:**
-- 🧠 **Emotional Intelligence**: Real-time mood detection and adaptive UI
-- 🎨 **Mood-Adaptive Theming**: Colors and interface adapt to your emotional state  
-- 🤖 **AI Pair Programming**: Context-aware coding assistance that understands your vibe
-- 🧘 **Calm Tech Design**: Reduces cognitive load and promotes developer wellness
-- ♿ **Neurodivergent-Friendly**: Designed for diverse cognitive styles and needs
+## Mission & Vision
 
-[→ Learn more about VibeStudio](products/vibestudio/)
+**Mission:**  
+To build and incubate technology companies that survivors of crisis can trust — trauma-informed, transparent, and designed to empower recovery, not just interrupt harm.
 
-## 🌟 The Vibe Coding Revolution
+**Vision:**  
+A world where no one faces trauma, legal systems, or recovery alone — where digital infrastructure becomes a bridge to connection, safety, and renewal through purpose-built companies and projects.
 
-**Vibe Coding** is our proprietary methodology that represents the next evolution in human-computer interaction for software development. It's based on three core principles:
+---
 
-1. **Emotional Awareness**: Understanding and responding to developer emotional states
-2. **Adaptive Environment**: Technology that evolves with human needs in real-time  
-3. **Creative Synergy**: Human creativity enhanced, not replaced, by AI
+## Our Approach
 
-[→ Deep dive into Vibe Coding methodology](docs/vibe-coding.html)
+**Lockard LLC** operates as a parent company that develops and launches specialized ventures, each addressing specific needs within the survivor and crisis support ecosystem. Rather than building everything under one roof, we create focused companies that can deeply understand and serve their particular communities.
 
-## 📊 Market Opportunity
+### **Company Structure**
+Each project and company under the Lockard LLC umbrella operates as a distinct entity with its own:
+- Specialized focus area and target community
+- Dedicated team and resources
+- Customized technology stack and approach
+- Independent development roadmap
 
-- **$26B** AI-powered developer tools market by 2030
-- **97%** of developers now using AI tools in their workflow
-- **Growing demand** for developer wellness and mental health solutions
-- **Unique positioning** at the intersection of AI, emotional intelligence, and developer experience
+### **Current Portfolio**
+Our portfolio includes companies and projects in development across various domains:
+- **Crisis Support Technology** - AI-powered assistance and resource navigation
+- **Trauma-Informed Care** - Veterinary and pet welfare services for survivors
+- **Integrated Care Platforms** - Unified systems connecting multiple support services
+- **Community Infrastructure** - Tools and platforms for advocacy organizations
 
-## 🏗️ Our Technology Stack
+*Individual company details and project information will be available in their respective directories as they are developed and launched.*
 
-- **Frontend**: HTML5, CSS3, JavaScript ES6+
-- **Backend**: Firebase (Hosting, Remote Config, Analytics, Functions)
-- **AI/ML**: OpenAI GPT-4, Custom emotion detection models
-- **Infrastructure**: Firebase Hosting with custom domain
-- **Deployment**: Firebase CLI, continuous deployment
-- **Development**: Modern web standards, responsive design
+---
 
-## 🎖️ Company Credentials
+## Core Principles
 
-- **🏢 Legal Status**: Registered LLC in Kentucky
-- **🆔 EIN**: Obtained and verified
-- **📜 Business License**: Active Kentucky business license
-- **🌐 Domains**: lockard.llc, vibestudio.online
-- **🔒 Security**: SOC 2 compliance in progress
+Lockard LLC isn't about scale for scale's sake. We measure success by **trust, transparency, and tangible impact** across all our companies and projects.
 
-## 🚀 Products & Services
+**Lived-Experience Design**  
+Every company and project begins with empathy and ends with clarity. We build tools informed by personal experience, survivor feedback, and trauma psychology — not guesswork.
 
-### Current Products
-- **[VibeStudio](https://vibestudio.online)** - Mood-adaptive web IDE (Beta)
+**Ethical Infrastructure**  
+Data privacy, security, and informed consent are non-negotiable across all ventures. Our systems are auditable, transparent, and designed to protect users even in high-risk situations.
 
-### Coming Soon
-- **VibeStudio Enterprise** - Team collaboration and wellness analytics
-- **Vibe SDK** - Emotional intelligence APIs for third-party tools
-- **Vibe Plugins** - Integrations for popular IDEs and editors
+**Trauma-Informed UX**  
+We design calm, focused interfaces for people under stress. Clarity replaces noise; compassion replaces friction in every product we develop.
 
-### Professional Services
-- Developer wellness audits
-- Custom emotional intelligence integrations
-- Vibe coding methodology consulting
+**Community Partnership**  
+We co-develop with shelters, legal aid teams, social service agencies, and advocacy partners — because solving real problems means building with the community, not for it.
 
-## 👥 Team & Leadership
+**Purposeful Incubation**  
+Each company we develop serves a specific, well-defined need within the survivor support ecosystem, ensuring focused impact rather than diluted efforts.
 
-**Founder & CEO**: Leading the vision for emotionally intelligent developer tools
+---
 
-**Open Positions**: We're actively hiring passionate individuals who believe in human-centered AI development.
+## Technical Overview
 
-[→ View current openings and team details](docs/company/TEAM.md)
+This repository hosts Lockard LLC's parent company web presence, documentation portal, and backend infrastructure.  
+It serves as the central hub for information about our umbrella organization and provides the foundation for individual company directories as they are developed.
 
-## 💰 Investment & Partnerships
+### Repository Structure
 
-Lockard LLC is positioned for strategic growth and seeking partnerships with:
+```
+lockard-llc/
+├── index.html              # Parent company landing page
+├── assets/                 # Global styles, icons, scripts, imagery
+├── docs/                   # Documentation portal for parent company
+├── firebase/               # Firestore rules, Remote Config, hosting setup
+├── firebase.json           # Environment and emulator configuration
+├── package.json            # Dependencies and workflow scripts
+└── [future company directories] # Individual company/project directories
+    ├── dvoGPT/             # Future: AI assistant company
+    ├── safePaws/           # Future: Veterinary care company
+    ├── carePlatform/       # Future: Integrated care platform
+    └── [additional companies] # Future: Other specialized ventures
+```
 
-- **Venture Capital**: Seed and Series A funding opportunities
-- **Strategic Partners**: Microsoft, Google, GitHub, and other developer tool companies
-- **Enterprise Clients**: Companies prioritizing developer experience and wellness
+### Individual Company Structure
+As companies are developed, each will have its own directory with:
+- Independent documentation and README files
+- Company-specific assets and branding
+- Dedicated development workflows
+- Custom Firebase configurations (if needed)
 
-**Investment Highlights:**
-- Unique market positioning in $26B+ market
-- Proprietary "vibe coding" methodology  
-- Strong technical foundation and working prototype
-- Alignment with AI ethics and digital wellness trends
+### Firebase Configuration
 
-[→ Investor information and pitch deck](docs/company/INVESTORS.md)
+1. Copy `firebase/config.template.js` → `firebase/config.js`  
+2. Add your Firebase Web App credentials (Console → Project Settings → General)  
+3. Confirm `window.__FIREBASE_CONFIG__` matches your environment  
+4. Run `yarn dev` to preview locally with Firebase emulators  
+5. Deploy with `yarn deploy` or `yarn deploy:all` (site + config updates)
 
-## 🌍 Industry Impact
+Keep `config.template.js` untouched to preserve contributor clarity.  
+When rotating credentials, update and redeploy without exposing sensitive data.
 
-Lockard LLC is contributing to several important movements:
+---
 
-- **🤖 AI Ethics**: Developing responsible AI that enhances human potential
-- **🧘 Digital Wellness**: Promoting healthy technology relationships
-- **♿ Inclusive Design**: Creating tools accessible to neurodivergent developers
-- **💚 Calm Tech**: Technology that respects human attention and well-being
+## Development
 
-## 📈 Traction & Metrics
+### Prerequisites
+- Node.js 18+  
+- Yarn package manager  
+- Firebase CLI (`npm install -g firebase-tools`)
 
-- **🏗️ Product Status**: Working prototype with Firebase backend
-- **👥 Beta Users**: Growing developer community
-- **📊 Engagement**: High satisfaction scores from early users
-- **🎯 Market Validation**: Strong interest from developer community
+### Commands
 
-## 🤝 Get Involved
+```bash
+yarn install      # Install dependencies
+yarn dev          # Run local server with Firebase emulators
+yarn deploy       # Deploy production site
+yarn deploy:all   # Deploy site + Firebase configurations
+````
 
-### For Developers
-- **Try VibeStudio**: [app.vibestudio.online](https://app.vibestudio.online)
-- **Join Community**: Discord, Reddit r/vibecoding
-- **Contribute**: Open source components and feedback
+### Workflow
 
-### For Investors
-- **Pitch Deck**: Available upon request
-- **Due Diligence**: Comprehensive documentation available
-- **Contact**: hello@lockard.llc
+1. Branch from `main` (e.g., `feature/care-platform`, `update/docs`)
+2. Test locally with `yarn dev`
+3. Validate responsiveness, accessibility, and error-free builds
+4. Submit a pull request with clear notes
+5. Merge after review and deploy to production
 
-### For Partners
-- **Integration Opportunities**: API partnerships
-- **Enterprise Solutions**: Custom implementations
-- **Reseller Program**: Channel partnership opportunities
+---
 
-## 📞 Contact Information
+## Contributing
 
-- **Website**: [lockard.llc](https://lockard.llc)
-- **Email**: hello@lockard.llc
-- **Product**: [vibestudio.online](https://vibestudio.online)
-- **LinkedIn**: [Company Page](https://linkedin.com/company/lockard-llc)
-- **Twitter**: [@LockardLLC](https://twitter.com/LockardLLC)
+Contributions should advance our core mission: **technology built with empathy, precision, and survivor safety in mind.**
 
-## 📄 Legal & Compliance
+**We welcome:**
 
-- **Privacy Policy**: [View Policy](docs/legal/PRIVACY.md)
-- **Terms of Service**: [View Terms](docs/legal/TERMS.md)  
-- **Security Practices**: [View Security](docs/legal/SECURITY.md)
-- **License**: [View License](LICENSE)
+* Accessibility improvements (WCAG, keyboard navigation, screen reader support)
+* Security and privacy enhancements
+* Documentation clarity or technical refinements
+* Performance and infrastructure optimizations
+
+**Guidelines:**
+
+* Keep commits focused and descriptive
+* Document any dependency or configuration changes
+* Verify all builds locally before submitting PRs
+* Prioritize user dignity, safety, and trust above all else
+
+---
+
+## Roadmap
+
+### Near-Term Goals
+
+* Develop and launch first specialized company under the Lockard LLC umbrella
+* Establish individual company directories and documentation frameworks
+* Create standardized development and deployment workflows for subsidiary companies
+* Publish the **Trauma-Informed Tech Framework** for open adoption across all ventures
+
+### Long-Term Vision
+
+* Build a portfolio of focused companies addressing different aspects of survivor support
+* Establish cross-agency data-sharing models grounded in privacy and ethics
+* Integrate care coordination systems across legal, housing, and health sectors
+* Scale Lockard's ecosystem regionally through mission-aligned partnerships and subsidiary companies
+
+---
+
+## Why It Matters
+
+Lockard LLC is more than a company — it's a personal declaration of survival turned systemic redesign.
+Every system that once failed me now informs what we build across all our ventures, ensuring others don't face the same isolation, fear, or uncertainty.
+
+Technology cannot erase trauma — but it can make recovery navigable, accessible, and dignified.
+That is what we build for, across every company and project we develop.
+
+By creating focused, specialized companies rather than trying to solve everything under one roof, we can ensure that each venture deeply understands and serves its specific community, leading to more meaningful impact and sustainable solutions.
+
+---
+
+## Contact
+
+**Email:** [hello@lockard.llc](mailto:hello@lockard.llc)
+**Website:** [https://lockard.llc](https://lockard.llc)
+**Documentation:** [https://docs.lockard.llc](https://docs.lockard.llc)
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for developers by Lockard LLC</sub><br>
-  <sub>Pioneering the future of emotionally intelligent software development</sub>
+
+🕊️ *Built from survival. Designed for recovery. Engineered for dignity across every venture.*
+
 </div>
