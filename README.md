@@ -14,11 +14,17 @@
 
 ## About
 
-I founded **Lockard LLC** after surviving more than a decade of domestic violence, systemic neglect, and the long, unseen process of rebuilding from the ground up.  
-What began as a personal act of survival has become a parent company dedicated to transforming lived experience into accessible, ethical technology for people in crisis.
+I founded **Lockard LLC** as both a declaration and a blueprint — proof that technology, when rooted in empathy and lived experience, can become a force for dignity and stability.  
+For me, this isn't a theory. It's survival turned into strategy.
+
+After surviving thirteen years of domestic violence, addiction, and systemic neglect, I made a promise: if I ever reached safety, I would build systems that helped others do the same.  
+**Lockard LLC** is the fulfillment of that promise — a hybrid technology company that bridges advocacy, design, and data integrity to help survivors rebuild their lives with structure and compassion.
+
+I registered the company in Kentucky on July 4, 2025 — intentionally on Independence Day. That date represents more than incorporation; it marks my own freedom.  
+The company operates from Lexington, KY, where I began rebuilding after escaping abuse, recovering from HIV-related complications, and completing my degree at Eastern Kentucky University. Every pillar of Lockard LLC stands on the same foundation that carried me through those years: resilience, clarity, and a refusal to let cruelty define my story.
 
 **Lockard LLC** serves as an umbrella organization that develops and incubates specialized companies and projects, each bringing empathy, structure, and transparency to systems that too often fail those they're meant to protect.  
-Headquartered in Kentucky, our work blends **social innovation**, **human-centered design**, and **ethical engineering** to build technology that restores trust — not just efficiency.
+Our work blends **social innovation**, **human-centered design**, and **ethical engineering** to build technology that restores trust — not just efficiency.
 
 **Our mission:** Transform lived experience into infrastructure for dignity through purpose-built companies and projects.
 
@@ -31,6 +37,21 @@ To build and incubate technology companies that survivors of crisis can trust �
 
 **Vision:**  
 A world where no one faces trauma, legal systems, or recovery alone — where digital infrastructure becomes a bridge to connection, safety, and renewal through purpose-built companies and projects.
+
+---
+
+## How We Operate
+
+**Lockard LLC** runs as a hybrid social enterprise — a for-profit LLC structured to serve mission-first programs through fiscal sponsorship partnerships.  
+This structure allows for sustainable growth while protecting the company's integrity and ethical foundations.
+
+Our guiding principles are simple but non-negotiable:
+
+**Trauma-Informed Everything** — Every design, workflow, and policy starts with one question: "What impact will this have on someone in crisis?"
+
+**Transparency and Safety Over Speed** — We don't rush deployment at the cost of privacy or dignity.
+
+**Collaboration Over Competition** — Survivors need networks, not silos. We build systems that connect rather than divide.
 
 ---
 
@@ -74,6 +95,14 @@ We co-develop with shelters, legal aid teams, social service agencies, and advoc
 
 **Purposeful Incubation**  
 Each company we develop serves a specific, well-defined need within the survivor support ecosystem, ensuring focused impact rather than diluted efforts.
+
+### **Brand and Identity**
+
+The Lockard brand represents both vulnerability and strength — a bridge between pain and progress.  
+Our tone is professional but human, built to invite trust from survivors, partners, and funders alike.  
+The logo, colors, and messaging are grounded in calmness, precision, and accessibility — visual proof that empathy and design excellence can coexist.
+
+Every project we take on — from ethical infrastructure development to human-centered AI design — aligns with one mission: to make stability accessible, not conditional.
 
 ---
 
@@ -167,16 +196,20 @@ Contributions should advance our core mission: **technology built with empathy, 
 
 ## Roadmap
 
-### Near-Term Goals
+### Near-Term Goals (Next 18 Months)
 
-* Develop and launch first specialized company under the Lockard LLC umbrella
+* Establish Lockard LLC as a trusted leader in advocacy-driven technology
+* Develop partnerships and secure fiscal sponsorship for mission-first programs
+* Expand capacity to collaborate with social service networks, community organizations, and ethical technology partners
+* Launch first specialized company under the Lockard LLC umbrella
 * Establish individual company directories and documentation frameworks
 * Create standardized development and deployment workflows for subsidiary companies
-* Publish the **Trauma-Informed Tech Framework** for open adoption across all ventures
 
 ### Long-Term Vision
 
+* Position Lockard LLC as a national model for ethical, trauma-informed technology
 * Build a portfolio of focused companies addressing different aspects of survivor support
+* Combine artificial intelligence, data governance, and human design to create compassionate, scalable systems
 * Establish cross-agency data-sharing models grounded in privacy and ethics
 * Integrate care coordination systems across legal, housing, and health sectors
 * Scale Lockard's ecosystem regionally through mission-aligned partnerships and subsidiary companies
@@ -188,10 +221,16 @@ Contributions should advance our core mission: **technology built with empathy, 
 Lockard LLC is more than a company — it's a personal declaration of survival turned systemic redesign.
 Every system that once failed me now informs what we build across all our ventures, ensuring others don't face the same isolation, fear, or uncertainty.
 
+For over a decade, I lived under the control of someone who weaponized isolation, addiction, and dependency. I understand intimately how hard it is to navigate those systems — filing protection orders, accessing trauma-informed medical care, finding safe housing — none of it is built for people in crisis.
+
+That's why I created Lockard LLC: to build the tools I wish had existed when I was trapped in those moments.
+
 Technology cannot erase trauma — but it can make recovery navigable, accessible, and dignified.
 That is what we build for, across every company and project we develop.
 
 By creating focused, specialized companies rather than trying to solve everything under one roof, we can ensure that each venture deeply understands and serves its specific community, leading to more meaningful impact and sustainable solutions.
+
+Lockard LLC isn't just my company — it's the architecture of my recovery, and the framework through which I help others rebuild theirs.
 
 ---
 
