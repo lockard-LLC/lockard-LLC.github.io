@@ -33,13 +33,13 @@ Create a `.env` file in your project root (NEVER commit this file):
 
 ```bash
 # .env file (create this locally, never commit)
-FIREBASE_API_KEY=your-new-api-key-here
-FIREBASE_AUTH_DOMAIN=lockard-llc-business.firebaseapp.com
-FIREBASE_PROJECT_ID=lockard-llc-business
-FIREBASE_STORAGE_BUCKET=lockard-llc-business.firebasestorage.app
-FIREBASE_MESSAGING_SENDER_ID=272006666491
-FIREBASE_APP_ID=1:272006666491:web:d0c41e1d00849610a0785e
-FIREBASE_MEASUREMENT_ID=G-BVVNR41T8Y
+FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
+FIREBASE_AUTH_DOMAIN=YOUR_PROJECT.firebaseapp.com
+FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+FIREBASE_STORAGE_BUCKET=YOUR_PROJECT.firebasestorage.app
+FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
+FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
+FIREBASE_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
 #### **Firebase App Check (Recommended)**
@@ -67,6 +67,7 @@ window.__FIREBASE_CONFIG__ = {
 - ✅ **Old Key Deleted** - Remove exposed key from Firebase Console
 - ✅ **Environment Variables** - Use `.env` file for real credentials
 - ✅ **App Check Enabled** - Enable Firebase App Check for security
+- ✅ **reCAPTCHA Site Key Managed** - Rotate Enterprise site key and keep it in `.env`
 - ✅ **Domain Restrictions** - Restrict API key to your domains only
 - ✅ **Monitoring** - Check for unauthorized access
 

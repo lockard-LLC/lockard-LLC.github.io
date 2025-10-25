@@ -1,84 +1,52 @@
 {
-  "hosting": [
-    {
-      "target": "main",
-      "public": ".",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**",
-        "docs/**",
-        "examples/**",
-        ".env*",
-        "README.md",
-        "functions/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ],
-      "headers": [
-        {
-          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-          "headers": [
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            }
-          ]
-        },
-        {
-          "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "max-age=7200"
-            }
-          ]
-        },
-        {
-          "source": "**/*.@(js|css)",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "max-age=3600"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "target": "docs",
-      "public": "docs",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "headers": [
-        {
-          "source": "**/*.@(md|txt)",
-          "headers": [
-            {
-              "key": "Content-Type",
-              "value": "text/plain"
-            }
-          ]
-        },
-        {
-          "source": "**/*.@(html|htm)",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "max-age=3600"
-            }
-          ]
-        }
-      ]
-    }
-  ],
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "docs/**",
+      "examples/**",
+      ".env*",
+      "README.md",
+      "functions/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=7200"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600"
+          }
+        ]
+      }
+    ]
+  },
   "storage": {
     "rules": "firebase/storage.rules"
   },

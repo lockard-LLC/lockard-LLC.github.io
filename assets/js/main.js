@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add loading animation to buttons
-    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+    document.querySelectorAll('.btn-primary, .btn-secondary, .btn-ghost').forEach(button => {
         button.addEventListener('click', function() {
             // Skip visual feedback for mailto and external links
             if (!this.href || this.href.startsWith('mailto:') || this.href.startsWith('http')) {
@@ -74,15 +74,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Track button clicks
-    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const buttonText = e.target.textContent.trim();
-            const buttonType = e.target.classList.contains('btn-primary') ? 'primary' : 'secondary';
-            
+    document.querySelectorAll('.btn-primary, .btn-secondary, .btn-ghost').forEach(button => {
+        button.addEventListener('click', () => {
+            const buttonText = button.textContent.trim();
+            let buttonType = 'secondary';
+            if (button.classList.contains('btn-primary')) {
+                buttonType = 'primary';
+            } else if (button.classList.contains('btn-ghost')) {
+                buttonType = 'ghost';
+            }
+
             trackEvent('button_click', 'engagement', {
                 button_text: buttonText,
                 button_type: buttonType,
-                button_href: e.target.href || 'none'
+                button_href: button.href || button.getAttribute('data-href') || 'none'
             });
         });
     });

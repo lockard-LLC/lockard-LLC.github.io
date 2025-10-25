@@ -28,213 +28,283 @@
     <!-- reCAPTCHA Enterprise -->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdknvUrAAAAAO500OXCitu8If6AfVn3ytIsmDIr"></script>
 </head>
-<body>
+<body class="dynamic-layout dynamic-typography">
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav glass-nav">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span>✨</span>
-                <span>Lockard LLC</span>
-            </div>
+            <a class="nav-logo" href="#home" aria-label="Lockard LLC home">
+                <span class="nav-icon">✶</span>
+                <span class="nav-name">Lockard LLC</span>
+            </a>
             <div class="nav-links">
                 <a href="#about">About</a>
-                <a href="#what-we-do">What We Do</a>
+                <a href="#what-we-do">Focus</a>
                 <a href="#principles">Principles</a>
                 <a href="#contact">Contact</a>
+                <a href="https://docs.lockard.llc" class="nav-link-external" target="_blank" rel="noopener">Docs</a>
             </div>
             <div class="nav-cta">
-                <a href="#contact" class="btn-primary">Connect</a>
+                <a href="#contact" class="btn btn-primary">Connect</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Building Space for<br>
-                    <span class="text-gradient">Human-Centered Software</span>
-                </h1>
-                <p class="hero-description">
-                    Lockard LLC is a small studio exploring mindful digital experiences, collaborative tooling,
-                    and the ways technology can support people over the long term.
-                </p>
-                <div class="hero-actions">
-                    <a href="#what-we-do" class="btn-primary large">
-                        Explore Focus Areas
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M7 17l10-10M17 7v10h-10" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
-                    <a href="#contact" class="btn-secondary large">Request an Intro</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">2018</span>
-                        <span class="stat-label">Studio Established</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">Multi</span>
-                        <span class="stat-label">Disciplinary Practice</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">Future</span>
-                        <span class="stat-label">Research Friendly</span>
-                    </div>
-                </div>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-atmosphere" aria-hidden="true">
+                <span class="orb orb-one"></span>
+                <span class="orb orb-two"></span>
+                <span class="orb orb-three"></span>
             </div>
-            <div class="hero-visual">
-                <div class="demo-placeholder">
-                    <h3>🌱 Work in Progress</h3>
-                    <p>Incremental releases, thoughtful experiments, and prototypes designed with care.</p>
-                    <div class="demo-features">
-                        <div class="feature">🧭 Intentional Roadmaps</div>
-                        <div class="feature">🛠️ Developer Enablement</div>
-                        <div class="feature">💬 Inclusive Collaboration</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Quietly Investing in Better Software</h2>
-            <p class="section-intro">
-                Lockard LLC explores new approaches to software craft, team culture, and digital wellness.
-                We pair long-term research with practical experiments to uncover what makes teams resilient.
-            </p>
-            
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">🧭</div>
-                    <h3>Strategy & Discovery</h3>
-                    <p>Lightweight engagements to surface needs, define roadmaps, and prioritize the essentials.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🛠️</div>
-                    <h3>Product Foundations</h3>
-                    <p>Prototypes, architecture spikes, and documentation scaffolding ready for future growth.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🌐</div>
-                    <h3>Operational Support</h3>
-                    <p>Tools, playbooks, and process experiments that keep distributed teams aligned.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">🤝</div>
-                    <h3>Partner Network</h3>
-                    <p>Connecting trusted collaborators for brand, engineering, research, and compliance needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Focus Areas Section -->
-    <section id="what-we-do" class="investors">
-        <div class="container">
-            <h2>Where We Spend Our Time</h2>
-            <p class="section-intro">
-                We keep initiatives intentionally small. Each engagement builds toward a library of tools and
-                practices that will inform future releases.
-            </p>
-            
-            <div class="investment-highlights">
-                <div class="highlight">
-                    <h3>🧠 Research & Insights</h3>
-                    <p>Exploring how teams adopt new workflows, measure success, and maintain a healthy cadence.</p>
-                    <p style="color: #6b7280; font-style: italic;">Whitepapers and notes releasing gradually.</p>
-                </div>
-                <div class="highlight">
-                    <h3>🛠️ Internal Tooling</h3>
-                    <p>Creating internal dashboards, documentation templates, and onboarding guides that seed future client work.</p>
-                    <p style="color: #6b7280; font-style: italic;">Available to partners on request.</p>
-                </div>
-                <div class="highlight">
-                    <h3>🌍 Community Support</h3>
-                    <p>Investing time in mentoring, speaking, and open knowledge that supports the broader software community.</p>
-                    <p style="color: #6b7280; font-style: italic;">Reach out if you would like to collaborate.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Principles Section -->
-    <section id="principles" class="methodology">
-        <div class="container">
-            <h2>Guiding Principles</h2>
-            <p class="section-intro">
-                Every engagement is grounded in a few enduring ideas that keep us honest and curious.
-            </p>
-            
-            <div class="methodology-grid">
-                <div class="method-card">
-                    <div class="method-icon">🎧</div>
-                    <h3>Listen First</h3>
-                    <p>We pay attention to the people behind the software, letting their context shape the solution.</p>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon">🧩</div>
-                    <h3>Build with Care</h3>
-                    <p>Small, intentional releases keep the quality high and help teams stay confident in change.</p>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon">🌈</div>
-                    <h3>Invite Everyone</h3>
-                    <p>Openness and documentation ensure collaborators can join in, contribute, and learn together.</p>
-                </div>
-                <div class="method-card">
-                    <div class="method-icon">📊</div>
-                    <h3>Measure Thoughtfully</h3>
-                    <p>We track outcomes that reflect well-being, sustainability, and long-term relationships.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Start a Conversation</h2>
-                    <p>
-                        Interested in collaborating, exploring research, or learning more about our roadmap?
-                        Drop us a line and we will schedule a relaxed introduction.
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <div class="hero-badge reveal" style="--delay:0.1s;">Advocacy-driven technology studio</div>
+                    <h1 class="hero-title reveal" style="--delay:0.2s;">
+                        Designing calm, future-ready systems for real people.
+                    </h1>
+                    <p class="hero-description reveal" style="--delay:0.3s;">
+                        Lockard LLC blends lived experience with precision engineering to deliver software ecosystems
+                        that feel effortless, inclusive, and grounded in dignity.
                     </p>
-                    <div class="contact-details">
-                        <div class="detail">
-                            <div class="detail-icon">✉️</div>
-                            <div><h3>Email</h3><a href="mailto:hello@lockard.llc">hello@lockard.llc</a></div>
+                    <div class="hero-actions reveal" style="--delay:0.4s;">
+                        <a href="#what-we-do" class="btn btn-primary">
+                            Explore Focus Areas
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17l10-10M17 7v10h-10" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-ghost">Request an Intro</a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div class="metric reveal" style="--delay:0.45s;">
+                            <span class="metric-label">Est. 2018</span>
+                            <span class="metric-value">Seven years of survivor-led research, strategy, and care.</span>
                         </div>
-                        <div class="detail">
-                            <div class="detail-icon">💼</div>
-                            <div><h3>Partner Requests</h3><a href="mailto:partners@lockard.llc">partners@lockard.llc</a></div>
+                        <div class="metric reveal" style="--delay:0.5s;">
+                            <span class="metric-label">Multidisciplinary Practice</span>
+                            <span class="metric-value">Design, engineering, operations, and trust tooling under one roof.</span>
                         </div>
-                        <div class="detail">
-                            <div class="detail-icon">📍</div>
-                            <div><h3>Location</h3><p>Remote-first, Seattle roots</p></div>
+                        <div class="metric reveal" style="--delay:0.55s;">
+                            <span class="metric-label">Future Friendly</span>
+                            <span class="metric-value">Prototypes, playbooks, and AI insights tailored to survivor safety.</span>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>Currently Building</h3>
-                    <p>Share what you are working on and we will respond within a few days.</p>
-                    <a href="mailto:hello@lockard.llc" class="btn-primary">
-                        Email Us
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </a>
-                    <div class="contact-note">
-                        <p>Prefer async updates? Follow along in our upcoming newsletter—details soon.</p>
+                <div class="hero-preview">
+                    <div class="preview-card main-card reveal" style="--delay:0.35s;">
+                        <header>
+                            <span class="status-dot"></span>
+                            <span>In the studio</span>
+                            <time datetime="2025-07">July ‘25</time>
+                        </header>
+                        <ul>
+                            <li>
+                                <strong>Integrated care platform</strong>
+                                <span>Data governance, guided intake, compassionate workflows.</span>
+                            </li>
+                            <li>
+                                <strong>AI logic toolkit</strong>
+                                <span>Human-reviewed generative patterns to support critical decisions.</span>
+                            </li>
+                            <li>
+                                <strong>Community trust layer</strong>
+                                <span>Documentation rituals and shared vocabulary for collaborators.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="preview-card glass highlight-card">
+                        <div class="highlight-title">Operating Modes</div>
+                        <div class="highlight-items">
+                            <span>Discovery Sprints</span>
+                            <span>Design Systems</span>
+                            <span>Resilience Audits</span>
+                            <span>Fractional Ops</span>
+                        </div>
+                    </div>
+                    <div class="floating-pill pill-one">
+                        <span>✨ Calm by design</span>
+                    </div>
+                    <div class="floating-pill pill-two">
+                        <span>🧭 Survivor-informed</span>
+                    </div>
+                    <div class="floating-pill pill-three">
+                        <span>🌐 Privacy-first</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="scroll-indicator" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <!-- Studio Pillars -->
+        <section id="about" class="section section-light">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow reveal" style="--delay:0.1s;">Studio Pillars</span>
+                    <h2 class="section-title reveal" style="--delay:0.2s;">Quietly investing in better software ecosystems.</h2>
+                    <p class="section-intro reveal" style="--delay:0.3s;">
+                        We stay intentionally small so every engagement receives attuned attention, thoughtful pacing,
+                        and the safety of a practiced operating framework.
+                    </p>
+                </div>
+                <div class="card-grid">
+                    <article class="card reveal" style="--delay:0.25s;">
+                        <div class="card-icon">🧭</div>
+                        <h3>Strategy &amp; Discovery</h3>
+                        <p>Ground teams in clarity with narrative mapping, research synthesis, and actionable next steps.</p>
+                    </article>
+                    <article class="card reveal" style="--delay:0.3s;">
+                        <div class="card-icon">🛠️</div>
+                        <h3>Product Foundations</h3>
+                        <p>Build resilient architecture, documentation kits, and prototypes that translate easily to delivery.</p>
+                    </article>
+                    <article class="card reveal" style="--delay:0.35s;">
+                        <div class="card-icon">🌐</div>
+                        <h3>Operational Support</h3>
+                        <p>Playbooks, tooling, and rituals that keep distributed collaborators aligned without burnout.</p>
+                    </article>
+                    <article class="card reveal" style="--delay:0.4s;">
+                        <div class="card-icon">🤝</div>
+                        <h3>Partner Network</h3>
+                        <p>Curated specialists across design, engineering, legal, and compliance when the work expands.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Focus Tracks -->
+        <section id="what-we-do" class="section section-gradient">
+            <div class="container">
+                <div class="section-head light">
+                    <span class="eyebrow reveal" style="--delay:0.1s;">Focus Tracks</span>
+                    <h2 class="section-title reveal" style="--delay:0.2s;">Where our time and energy live right now.</h2>
+                    <p class="section-intro reveal" style="--delay:0.3s;">
+                        Each track is an experiment in dignified technology—small, deliberate, and rooted in community care.
+                    </p>
+                </div>
+                <div class="focus-grid">
+                    <article class="focus-card reveal" style="--delay:0.25s;">
+                        <header>
+                            <span class="focus-icon">🧠</span>
+                            <h3>Research &amp; Insights</h3>
+                        </header>
+                        <p>Ethnography, service design, and trauma-aware interviews to surface the systems survivors navigate.</p>
+                        <footer>Whitepapers and open notes releasing gradually.</footer>
+                    </article>
+                    <article class="focus-card reveal" style="--delay:0.3s;">
+                        <header>
+                            <span class="focus-icon">🛠️</span>
+                            <h3>Internal Tooling</h3>
+                        </header>
+                        <p>Shared dashboards, AI-assisted workflows, and documentation scaffolds that teams can adapt quickly.</p>
+                        <footer>Available to aligned partners by request.</footer>
+                    </article>
+                    <article class="focus-card reveal" style="--delay:0.35s;">
+                        <header>
+                            <span class="focus-icon">🌍</span>
+                            <h3>Community Support</h3>
+                        </header>
+                        <p>Mentorship, speaking, and open knowledge that strengthens advocacy networks beyond a single product.</p>
+                        <footer>Let’s collaborate on what your community needs.</footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Principles -->
+        <section id="principles" class="section section-light">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow reveal" style="--delay:0.1s;">Guiding Principles</span>
+                    <h2 class="section-title reveal" style="--delay:0.2s;">Practices that keep us careful, curious, and kind.</h2>
+                </div>
+                <div class="principle-grid">
+                    <article class="principle-card reveal" style="--delay:0.25s;">
+                        <div class="principle-icon">🎧</div>
+                        <h3>Listen First</h3>
+                        <p>Treat every conversation as an artifact; people’s lived experiences shape our blueprints.</p>
+                    </article>
+                    <article class="principle-card reveal" style="--delay:0.3s;">
+                        <div class="principle-icon">🧩</div>
+                        <h3>Build with Care</h3>
+                        <p>Favor incremental releases, layered testing, and inclusive documentation over urgency.</p>
+                    </article>
+                    <article class="principle-card reveal" style="--delay:0.35s;">
+                        <div class="principle-icon">🌈</div>
+                        <h3>Invite Everyone</h3>
+                        <p>Design transparent paths in so partners, survivors, and contributors can participate fully.</p>
+                    </article>
+                    <article class="principle-card reveal" style="--delay:0.4s;">
+                        <div class="principle-icon">📊</div>
+                        <h3>Measure Thoughtfully</h3>
+                        <p>Success metrics emphasize trust, safety, and long-term relationship health—not just velocity.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-wrap">
+                    <div class="contact-content reveal" style="--delay:0.2s;">
+                        <span class="eyebrow">Let’s begin</span>
+                        <h2>Start a conversation</h2>
+                        <p>
+                            Whether you’re stewarding a new program or rethinking established infrastructure, we’re ready to listen,
+                            ask careful questions, and map the next set of experiments together.
+                        </p>
+                        <div class="contact-details">
+                            <div class="detail">
+                                <span class="detail-icon">✉️</span>
+                                <div>
+                                    <h3>Email</h3>
+                                    <a href="mailto:hello@lockard.llc">hello@lockard.llc</a>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-icon">💼</span>
+                                <div>
+                                    <h3>Partner Requests</h3>
+                                    <a href="mailto:partners@lockard.llc">partners@lockard.llc</a>
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-icon">📍</span>
+                                <div>
+                                    <h3>Location</h3>
+                                    <p>Remote-first · Seattle roots</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-note">
+                            Prefer async updates? A studio newsletter arrives later this year—let us know if you’d like a preview.
+                        </div>
+                    </div>
+                    <div class="contact-action reveal" style="--delay:0.3s;">
+                        <div class="contact-card">
+                            <h3>Currently building</h3>
+                            <p>Share what you’re working on and we’ll reply within a few days with next steps.</p>
+                            <a href="mailto:hello@lockard.llc" class="btn btn-primary">
+                                Email Us
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </a>
+                            <div class="mini-card">
+                                <span class="mini-label">Upcoming</span>
+                                <p>Open studio hours, shared templates, and product notes launching Q4.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -242,7 +312,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Lockard LLC</h3>
-                    <p>© <span id="currentYear"></span> Lockard LLC · Exploring mindful technology for the long term</p>
+                    <p>© <span id="currentYear"></span> Lockard LLC · Restoring stability, safety, and dignity through technology.</p>
                 </div>
                 <div class="footer-links">
                     <a href="#about">About</a>

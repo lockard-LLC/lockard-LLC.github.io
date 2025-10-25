@@ -3,18 +3,18 @@
 /* CSS Custom Properties that can be overridden by Firebase */
 :root {
   /* Colors - Configurable via Remote Config */
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --secondary: #8b5cf6;
-  --accent: #22c55e;
+  --primary: #356bff;
+  --primary-dark: #1f4dff;
+  --secondary: #7c5cff;
+  --accent: #57e4ff;
   
   /* Neutral Colors */
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-900: #111827;
+  --gray-50: #f5f7ff;
+  --gray-100: #e8ecff;
+  --gray-900: #0f172a;
   --white: #ffffff;
-  --text-color: #111827;
-  --background: #ffffff;
+  --text-color: #0f172a;
+  --background: #f6f7ff;
   
   /* Typography - Configurable */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -22,9 +22,9 @@
   --body-font-size: 1rem;
   
   /* Layout - Configurable */
-  --container-max: 1200px;
+  --container-max: 1180px;
   --section-padding: 5rem 0;
-  --border-radius: 0.5rem;
+  --border-radius: 2rem;
   
   /* Animation Settings */
   --transition-speed: 0.3s;

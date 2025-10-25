@@ -125,7 +125,7 @@ firebase/config.js
 const apiKey = process.env.FIREBASE_API_KEY;
 
 // Bad: Hardcode in source
-const apiKey = "AIzaSyDMuyqu8Sp_7UNWYlAfdW6gBdT7fR0DBJA";
+const apiKey = "AIzaSyEXAMPLEKEY0000000000000000000";
 ```
 
 ### 3. **Template Files Only**

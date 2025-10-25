@@ -7,20 +7,20 @@ This guide covers the complete Firebase setup for Lockard LLC, including hosting
 ## Project Configuration
 
 ### Firebase Project Details
-- **Project ID**: `lockard-llc`
-- **Main Site**: `https://lockard.llc`
-- **Docs Site**: `https://docs.lockard.llc`
+- **Firebase project**: `lockard-llc-business` (CLI default in `.firebaserc`)
+- **Hosting targets**: `lockard-llc` (main site), `docs-lockard-llc` (documentation)
+- **Custom domains**: `https://lockard.llc` and `https://docs.lockard.llc`
 
 ### Environment Variables
 ```bash
-# Firebase Configuration
-FIREBASE_API_KEY=AIzaSyDMuyqu8Sp_7UNWYlAfdW6gBdT7fR0DBJA
-FIREBASE_AUTH_DOMAIN=lockard-llc.firebaseapp.com
-FIREBASE_PROJECT_ID=lockard-llc
-FIREBASE_STORAGE_BUCKET=lockard-llc.firebasestorage.app
-FIREBASE_MESSAGING_SENDER_ID=207878838967
-FIREBASE_APP_ID=1:207878838967:web:565c86060a9e5408c74b32
-FIREBASE_MEASUREMENT_ID=G-ZSSGH36898
+# Copy these from your private `.env` (see `.env.example`)
+FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
+FIREBASE_AUTH_DOMAIN=YOUR_PROJECT.firebaseapp.com
+FIREBASE_PROJECT_ID=YOUR_FIREBASE_PROJECT_ID
+FIREBASE_STORAGE_BUCKET=YOUR_PROJECT.firebasestorage.app
+FIREBASE_MESSAGING_SENDER_ID=YOUR_MESSAGING_SENDER_ID
+FIREBASE_APP_ID=YOUR_FIREBASE_APP_ID
+FIREBASE_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
 ## Multi-Site Hosting Setup

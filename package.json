@@ -4,12 +4,8 @@
   "description": "Lockard LLC",
   "scripts": {
     "dev": "firebase serve --only hosting",
-    "dev:main": "firebase serve --only hosting:main",
-    "dev:docs": "firebase serve --only hosting:docs",
     "build": "echo 'Static site - no build needed'",
     "deploy": "firebase deploy --only hosting",
-    "deploy:main": "firebase deploy --only hosting:main",
-    "deploy:docs": "firebase deploy --only hosting:docs",
     "deploy:all": "firebase deploy",
     "serve": "firebase serve",
     "lint": "echo 'Add linting when needed'"

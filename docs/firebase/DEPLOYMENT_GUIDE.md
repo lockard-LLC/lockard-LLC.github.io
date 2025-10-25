@@ -4,6 +4,8 @@
 
 This guide covers deploying both the main Lockard LLC site and the documentation site using Firebase Hosting.
 
+> **Default project:** Commands assume the CLI is pointed at the `lockard-llc-business` project defined in `.firebaserc`. Use `firebase use <project-id>` if you are targeting a different environment.
+
 ## Pre-Deployment Checklist
 
 ### 1. **Verify Firebase Configuration**
@@ -112,7 +114,7 @@ firebase deploy --only hosting --project staging-project
 ### Production
 ```bash
 # Deploy to production
-firebase deploy --only hosting --project lockard-llc
+firebase deploy --only hosting --project lockard-llc-business
 ```
 
 ## Monitoring and Maintenance

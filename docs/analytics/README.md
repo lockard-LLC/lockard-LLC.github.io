@@ -36,7 +36,7 @@ This directory contains documentation for Firebase Analytics integration in the 
 // firebase/config.js
 window.__FIREBASE_CONFIG__ = {
   // Your Firebase configuration
-  measurementId: "G-BVVNR41T8Y" // Analytics measurement ID
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID || "G-XXXXXXXXXX" // Analytics measurement ID
 };
 ```
 

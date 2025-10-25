@@ -6,6 +6,8 @@ This guide covers setting up multiple Firebase Hosting sites for Lockard LLC:
 - **Main Site**: `https://lockard.llc` (root directory)
 - **Docs Site**: `https://docs.lockard.llc` (docs directory)
 
+> **Project default:** The Firebase CLI is configured to use the `lockard-llc-business` project (see `.firebaserc`). All examples assume that production project. If you switch to a dev sandbox, run `firebase use <project-id>` before deploying.
+
 ## ✅ Current Configuration
 
 ### Firebase Targets
