@@ -65,10 +65,12 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.97);
+  height: 72px;
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
   z-index: 999;
+  display: flex;
 }
 
 .nav-container {
@@ -78,8 +80,9 @@ a {
   gap: 2rem;
   width: 100%;
   max-width: var(--max-width);
-  padding: 0.85rem 2rem;
+  padding: 0 2rem;
   margin: 0 auto;
+  height: 100%;
 }
 
 .nav-logo {

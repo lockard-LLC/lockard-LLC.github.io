@@ -41,23 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add loading animation to buttons
-    document.querySelectorAll('.btn-primary, .btn-secondary, .btn-ghost').forEach(button => {
-        button.addEventListener('click', function() {
-            // Skip visual feedback for mailto and external links
-            if (!this.href || this.href.startsWith('mailto:') || this.href.startsWith('http')) {
-                return;
-            }
-            
-            const originalText = this.textContent;
-            this.style.opacity = '0.8';
-            
-            setTimeout(() => {
-                this.style.opacity = '1';
-            }, 150);
-        });
-    });
-
     // Firebase Analytics tracking
     function trackEvent(event, category, additionalData = {}) {
         console.log(`Event: ${event}, Category: ${category}`);
@@ -132,29 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 time_seconds: timeOnPage
             });
         }
-    });
-
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe cards for fade-in animation
-    document.querySelectorAll('.about-card, .highlight').forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
     });
 
     // Console message for developers
