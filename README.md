@@ -14,16 +14,16 @@
 
 ## About
 
-I founded **Lockard LLC** as both a declaration and a blueprint — proof that technology, when rooted in empathy and lived experience, can become a force for dignity and stability.  
+I founded **Lockard LLC** as both a declaration and a blueprint — proof that technology, when rooted in empathy and lived experience, can become a force for dignity and stability.
 For me, this isn't a theory. It's survival turned into strategy.
 
-After surviving thirteen years of domestic violence, addiction, and systemic neglect, I made a promise: if I ever reached safety, I would build systems that helped others do the same.  
+After surviving thirteen years of domestic violence, addiction, and systemic neglect, I made a promise: if I ever reached safety, I would build systems that helped others do the same.
 **Lockard LLC** is the fulfillment of that promise — a hybrid technology company that bridges advocacy, design, and data integrity to help survivors rebuild their lives with structure and compassion.
 
-I registered the company in Kentucky on July 4, 2025 — intentionally on Independence Day. That date represents more than incorporation; it marks my own freedom.  
+I registered the company in Kentucky on July 4, 2025 — intentionally on Independence Day. That date represents more than incorporation; it marks my own freedom.
 The company operates from Lexington, KY, where I began rebuilding after escaping abuse, recovering from HIV-related complications, and completing my degree at Eastern Kentucky University. Every pillar of Lockard LLC stands on the same foundation that carried me through those years: resilience, clarity, and a refusal to let cruelty define my story.
 
-**Lockard LLC** serves as an umbrella organization that develops and incubates specialized companies and projects, each bringing empathy, structure, and transparency to systems that too often fail those they're meant to protect.  
+**Lockard LLC** serves as an umbrella organization that develops and incubates specialized companies and projects, each bringing empathy, structure, and transparency to systems that too often fail those they're meant to protect.
 Our work blends **social innovation**, **human-centered design**, and **ethical engineering** to build technology that restores trust — not just efficiency.
 
 **Our mission:** Transform lived experience into infrastructure for dignity through purpose-built companies and projects.
@@ -32,17 +32,17 @@ Our work blends **social innovation**, **human-centered design**, and **ethical 
 
 ## Mission & Vision
 
-**Mission:**  
+**Mission:**
 To build and incubate technology companies that survivors of crisis can trust — trauma-informed, transparent, and designed to empower recovery, not just interrupt harm.
 
-**Vision:**  
+**Vision:**
 A world where no one faces trauma, legal systems, or recovery alone — where digital infrastructure becomes a bridge to connection, safety, and renewal through purpose-built companies and projects.
 
 ---
 
 ## How We Operate
 
-**Lockard LLC** runs as a hybrid social enterprise — a for-profit LLC structured to serve mission-first programs through fiscal sponsorship partnerships.  
+**Lockard LLC** runs as a hybrid social enterprise — a for-profit LLC structured to serve mission-first programs through fiscal sponsorship partnerships.
 This structure allows for sustainable growth while protecting the company's integrity and ethical foundations.
 
 Our guiding principles are simple but non-negotiable:
@@ -81,25 +81,25 @@ Our portfolio includes companies and projects in development across various doma
 
 Lockard LLC isn't about scale for scale's sake. We measure success by **trust, transparency, and tangible impact** across all our companies and projects.
 
-**Lived-Experience Design**  
+**Lived-Experience Design**
 Every company and project begins with empathy and ends with clarity. We build tools informed by personal experience, survivor feedback, and trauma psychology — not guesswork.
 
-**Ethical Infrastructure**  
+**Ethical Infrastructure**
 Data privacy, security, and informed consent are non-negotiable across all ventures. Our systems are auditable, transparent, and designed to protect users even in high-risk situations.
 
-**Trauma-Informed UX**  
+**Trauma-Informed UX**
 We design calm, focused interfaces for people under stress. Clarity replaces noise; compassion replaces friction in every product we develop.
 
-**Community Partnership**  
+**Community Partnership**
 We co-develop with shelters, legal aid teams, social service agencies, and advocacy partners — because solving real problems means building with the community, not for it.
 
-**Purposeful Incubation**  
+**Purposeful Incubation**
 Each company we develop serves a specific, well-defined need within the survivor support ecosystem, ensuring focused impact rather than diluted efforts.
 
 ### **Brand and Identity**
 
-The Lockard brand represents both vulnerability and strength — a bridge between pain and progress.  
-Our tone is professional but human, built to invite trust from survivors, partners, and funders alike.  
+The Lockard brand represents both vulnerability and strength — a bridge between pain and progress.
+Our tone is professional but human, built to invite trust from survivors, partners, and funders alike.
 The logo, colors, and messaging are grounded in calmness, precision, and accessibility — visual proof that empathy and design excellence can coexist.
 
 Every project we take on — from ethical infrastructure development to human-centered AI design — aligns with one mission: to make stability accessible, not conditional.
@@ -108,7 +108,7 @@ Every project we take on — from ethical infrastructure development to human-ce
 
 ## Technical Overview
 
-This repository hosts Lockard LLC's parent company web presence, documentation portal, and backend infrastructure.  
+This repository hosts Lockard LLC's parent company web presence, documentation portal, and backend infrastructure.
 It serves as the central hub for information about our umbrella organization and provides the foundation for individual company directories as they are developed.
 
 ### Repository Structure
@@ -137,13 +137,13 @@ As companies are developed, each will have its own directory with:
 
 ### Firebase Configuration
 
-1. Copy `firebase/config.template.js` → `firebase/config.js`  
-2. Add your Firebase Web App credentials (Console → Project Settings → General)  
-3. Confirm `window.__FIREBASE_CONFIG__` matches your environment  
-4. Run `yarn dev` to preview locally with Firebase emulators  
+1. Copy `firebase/config.template.js` → `firebase/config.js`
+2. Add your Firebase Web App credentials (Console → Project Settings → General)
+3. Confirm `window.__FIREBASE_CONFIG__` matches your environment
+4. Run `yarn dev` to preview locally with Firebase emulators
 5. Deploy with `yarn deploy` or `yarn deploy:all` (site + config updates)
 
-Keep `config.template.js` untouched to preserve contributor clarity.  
+Keep `config.template.js` untouched to preserve contributor clarity.
 When rotating credentials, update and redeploy without exposing sensitive data.
 
 ---
@@ -151,8 +151,8 @@ When rotating credentials, update and redeploy without exposing sensitive data.
 ## Development
 
 ### Prerequisites
-- Node.js 18+  
-- Yarn package manager  
+- Node.js 18+
+- Yarn package manager
 - Firebase CLI (`npm install -g firebase-tools`)
 
 ### Commands

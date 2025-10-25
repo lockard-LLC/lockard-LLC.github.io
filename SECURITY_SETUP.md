@@ -1,5 +1,3 @@
-# 🔒 Security Setup Guide
-
 ## ⚠️ **CRITICAL: API Key Security**
 
 Your Firebase API key was exposed in the repository. Follow these steps immediately:
