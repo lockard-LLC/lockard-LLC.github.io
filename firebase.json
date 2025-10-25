@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
+      "target": "main",
       "public": ".",
-      "site": "lockard-llc",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -50,12 +50,32 @@
       ]
     },
     {
+      "target": "docs",
       "public": "docs",
-      "site": "docs-lockard-llc",
       "ignore": [
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(md|txt)",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(html|htm)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=3600"
+            }
+          ]
+        }
       ]
     }
   ],
@@ -69,6 +89,9 @@
     "database": "lockard-db",
     "rules": "firebase/firestore.rules",
     "indexes": "firebase/firestore.indexes.json"
+  },
+  "ai": {
+    "rules": "firebase/ai.rules"
   },
   "emulators": {
     "hosting": {

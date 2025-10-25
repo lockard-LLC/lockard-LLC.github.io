@@ -58,17 +58,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Simple analytics tracking
-    function trackEvent(event, category) {
+    // Firebase Analytics tracking
+    function trackEvent(event, category, additionalData = {}) {
         console.log(`Event: ${event}, Category: ${category}`);
-        // Add your analytics tracking here (Google Analytics, etc.)
+        
+        // Track with Firebase Analytics
+        if (window.FirebaseAnalytics) {
+            window.FirebaseAnalytics.trackEvent(event, {
+                category: category,
+                ...additionalData,
+                timestamp: new Date().toISOString(),
+                page_url: window.location.href
+            });
+        }
     }
 
     // Track button clicks
     document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
         button.addEventListener('click', (e) => {
-            trackEvent('button_click', e.target.textContent.trim());
+            const buttonText = e.target.textContent.trim();
+            const buttonType = e.target.classList.contains('btn-primary') ? 'primary' : 'secondary';
+            
+            trackEvent('button_click', 'engagement', {
+                button_text: buttonText,
+                button_type: buttonType,
+                button_href: e.target.href || 'none'
+            });
         });
+    });
+
+    // Track AI Logic interactions
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('btn-ai-suggestion') || 
+            e.target.classList.contains('btn-ai-enhancement') || 
+            e.target.classList.contains('btn-ai-insights')) {
+            
+            const aiFeature = e.target.classList.contains('btn-ai-suggestion') ? 'content_suggestions' :
+                             e.target.classList.contains('btn-ai-enhancement') ? 'message_assistant' :
+                             'research_insights';
+            
+            trackEvent('ai_feature_used', 'ai_logic', {
+                feature: aiFeature,
+                button_text: e.target.textContent.trim()
+            });
+        }
+    });
+
+    // Track scroll depth
+    let maxScrollDepth = 0;
+    window.addEventListener('scroll', () => {
+        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        if (scrollDepth > maxScrollDepth) {
+            maxScrollDepth = scrollDepth;
+            if (maxScrollDepth % 25 === 0) { // Track at 25%, 50%, 75%, 100%
+                trackEvent('scroll_depth', 'engagement', {
+                    scroll_percentage: maxScrollDepth
+                });
+            }
+        }
+    });
+
+    // Track time on page
+    let startTime = Date.now();
+    window.addEventListener('beforeunload', () => {
+        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+        if (timeOnPage > 5) { // Only track if user spent more than 5 seconds
+            trackEvent('time_on_page', 'engagement', {
+                time_seconds: timeOnPage
+            });
+        }
     });
 
     // Intersection Observer for animations
