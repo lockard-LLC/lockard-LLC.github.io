@@ -1,14 +1,12 @@
-<div align="center">
-  <img src="assets/images/favicon.svg" alt="Lockard LLC" width="96"/>
+# Lockard LLC
 
-  # Lockard LLC
+![Lockard LLC](assets/images/favicon.svg)
 
-  **A parent company dedicated to advocacy-driven technology — restoring stability, safety, and dignity through lived experience**
+## A parent company dedicated to advocacy-driven technology — restoring stability, safety, and dignity through lived experience
 
-  [![Website](https://img.shields.io/badge/website-lockard.llc-blue)](https://lockard.llc)
-  [![Docs](https://img.shields.io/badge/docs-documentation-lightgrey)](https://docs.lockard.llc)
-  [![License](https://img.shields.io/badge/license-Business-green)](LICENSE)
-</div>
+[![Website](https://img.shields.io/badge/website-lockard.llc-blue)](https://lockard.llc)
+[![Docs](https://img.shields.io/badge/docs-documentation-lightgrey)](https://docs.lockard.llc)
+[![License](https://img.shields.io/badge/license-Business-green)](LICENSE)
 
 ---
 
@@ -60,18 +58,25 @@ Our guiding principles are simple but non-negotiable:
 **Lockard LLC** operates as a parent company that develops and launches specialized ventures, each addressing specific needs within the survivor and crisis support ecosystem. Rather than building everything under one roof, we create focused companies that can deeply understand and serve their particular communities.
 
 ### **Company Structure**
+
 Each project and company under the Lockard LLC umbrella operates as a distinct entity with its own:
+
+### Company Structure
+
+Each project and company under the Lockard LLC umbrella operates as a distinct entity with its own:
+
 - Specialized focus area and target community
 - Dedicated team and resources
 - Customized technology stack and approach
-- Independent development roadmap
 
-### **Current Portfolio**
+### Current Portfolio
+
 Our portfolio includes companies and projects in development across various domains:
-- **Crisis Support Technology** - AI-powered assistance and resource navigation
-- **Trauma-Informed Care** - Veterinary and pet welfare services for survivors
-- **Integrated Care Platforms** - Unified systems connecting multiple support services
-- **Community Infrastructure** - Tools and platforms for advocacy organizations
+
+- **Crisis Support Technology** — AI-powered assistance and resource navigation
+- **Trauma-Informed Care** — Veterinary and pet welfare services for survivors
+- **Integrated Care Platforms** — Unified systems connecting multiple support services
+- **Community Infrastructure** — Tools and platforms for advocacy organizations
 
 *Individual company details and project information will be available in their respective directories as they are developed and launched.*
 
@@ -93,12 +98,13 @@ We design calm, focused interfaces for people under stress. Clarity replaces noi
 **Community Partnership**
 We co-develop with shelters, legal aid teams, social service agencies, and advocacy partners — because solving real problems means building with the community, not for it.
 
-**Purposeful Incubation**
-Each company we develop serves a specific, well-defined need within the survivor support ecosystem, ensuring focused impact rather than diluted efforts.
+### Purposeful Incubation
 
-### **Brand and Identity**
+### Brand and Identity
 
 The Lockard brand represents both vulnerability and strength — a bridge between pain and progress.
+Our tone is professional but human, built to invite trust from survivors, partners, and supporters alike.
+The logo, colors, and messaging are grounded in calmness, precision, and accessibility — visual proof that empathy and design excellence can coexist.
 Our tone is professional but human, built to invite trust from survivors, partners, and funders alike.
 The logo, colors, and messaging are grounded in calmness, precision, and accessibility — visual proof that empathy and design excellence can coexist.
 
@@ -113,7 +119,7 @@ It serves as the central hub for information about our umbrella organization and
 
 ### Repository Structure
 
-```
+```markdown
 lockard-llc/
 ├── index.html              # Parent company landing page
 ├── assets/                 # Global styles, icons, scripts, imagery
@@ -129,9 +135,13 @@ lockard-llc/
 ```
 
 ### Individual Company Structure
+
 As companies are developed, each will have its own directory with:
+
 - Independent documentation and README files
 - Company-specific assets and branding
+- Dedicated development workflows
+- Custom Firebase configurations (if needed)
 - Dedicated development workflows
 - Custom Firebase configurations (if needed)
 
@@ -146,11 +156,14 @@ As companies are developed, each will have its own directory with:
 Keep `config.template.js` untouched to preserve contributor clarity.
 When rotating credentials, update and redeploy without exposing sensitive data.
 
----
-
-## Development
-
 ### Prerequisites
+
+- Node.js 18+
+- Yarn package manager
+- Firebase CLI (`npm install -g firebase-tools`)
+
+## Development Prerequisites
+
 - Node.js 18+
 - Yarn package manager
 - Firebase CLI (`npm install -g firebase-tools`)
@@ -169,10 +182,6 @@ yarn deploy:all   # Deploy site + Firebase configurations
 1. Branch from `main` (e.g., `feature/care-platform`, `update/docs`)
 2. Test locally with `yarn dev`
 3. Validate responsiveness, accessibility, and error-free builds
-4. Submit a pull request with clear notes
-5. Merge after review and deploy to production
-
----
 
 ## Contributing
 
@@ -180,39 +189,48 @@ Contributions should advance our core mission: **technology built with empathy, 
 
 **We welcome:**
 
-* Accessibility improvements (WCAG, keyboard navigation, screen reader support)
-* Security and privacy enhancements
-* Documentation clarity or technical refinements
-* Performance and infrastructure optimizations
+- Accessibility improvements (Web Content Accessibility Guidelines (WCAG), keyboard navigation, screen reader support)
+- Security and privacy enhancements
+- Documentation clarity or technical refinements
+- Performance and infrastructure optimizations
 
 **Guidelines:**
 
-* Keep commits focused and descriptive
-* Document any dependency or configuration changes
-* Verify all builds locally before submitting PRs
-* Prioritize user dignity, safety, and trust above all else
+- Keep commits focused and descriptive
+- Document any dependency or configuration changes
+- Verify all builds locally before submitting PRs
+- Prioritize user dignity, safety, and trust above all else
 
----
-
-## Roadmap
+- Keep commits focused and descriptive
+- Document any dependency or configuration changes
+- Verify all builds locally before submitting PRs
+- Prioritize user dignity, safety, and trust above all else
 
 ### Near-Term Goals (Next 18 Months)
 
-* Establish Lockard LLC as a trusted leader in advocacy-driven technology
-* Develop partnerships and secure fiscal sponsorship for mission-first programs
-* Expand capacity to collaborate with social service networks, community organizations, and ethical technology partners
-* Launch first specialized company under the Lockard LLC umbrella
-* Establish individual company directories and documentation frameworks
-* Create standardized development and deployment workflows for subsidiary companies
+- Establish Lockard LLC as a trusted leader in advocacy-driven technology
+- Develop partnerships and secure fiscal sponsorship for mission-first programs
+- Expand capacity to collaborate with social service networks, community organizations, and ethical technology partners
+- Launch first specialized company under the Lockard LLC umbrella
+- Establish individual company directories and documentation frameworks
+- Create standardized development and deployment workflows for subsidiary companies
+
+- Develop partnerships and secure fiscal sponsorship for mission-first programs
 
 ### Long-Term Vision
 
-* Position Lockard LLC as a national model for ethical, trauma-informed technology
-* Build a portfolio of focused companies addressing different aspects of survivor support
-* Combine artificial intelligence, data governance, and human design to create compassionate, scalable systems
-* Establish cross-agency data-sharing models grounded in privacy and ethics
-* Integrate care coordination systems across legal, housing, and health sectors
-* Scale Lockard's ecosystem regionally through mission-aligned partnerships and subsidiary companies
+- Position Lockard LLC as a national model for ethical, trauma-informed technology
+- Build a portfolio of focused companies addressing different aspects of survivor support
+- Combine artificial intelligence, data governance, and human design to create compassionate, scalable systems
+- Establish cross-agency data-sharing models grounded in privacy and ethics
+- Integrate care coordination systems across legal, housing, and health sectors
+- Scale Lockard's ecosystem regionally through mission-aligned partnerships and subsidiary companies
+
+- Build a portfolio of focused companies addressing different aspects of survivor support
+- Combine artificial intelligence, data governance, and human design to create compassionate, scalable systems
+- Establish cross-agency data-sharing models grounded in privacy and ethics
+- Integrate care coordination systems across legal, housing, and health sectors
+- Scale Lockard's ecosystem regionally through mission-aligned partnerships and subsidiary companies
 
 ---
 
@@ -237,13 +255,4 @@ Lockard LLC isn't just my company — it's the architecture of my recovery, and 
 ## Contact
 
 **Email:** [hello@lockard.llc](mailto:hello@lockard.llc)
-**Website:** [https://lockard.llc](https://lockard.llc)
-**Documentation:** [https://docs.lockard.llc](https://docs.lockard.llc)
-
----
-
-<div align="center">
-
-🕊️ *Built from survival. Designed for recovery. Engineered for dignity across every venture.*
-
-</div>
+> 🕊️ *Built from survival. Designed for recovery. Engineered for dignity across every venture.*

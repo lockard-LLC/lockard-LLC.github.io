@@ -1,5 +1,5 @@
 {
-  "name": "Lockard LLC Workspace",
+  "name": "Lockard-LLC.github.io",
   "folders": [
     {
       "name": "Lockard-LLC.github.io",
@@ -21,7 +21,7 @@
       "firebase-debug.log": true
     },
     "explorer.fileNesting.enabled": true,
-    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.expand": true,
     "explorer.fileNesting.patterns": {
       "README.md": "CLEANUP_SUMMARY.md,ORGANIZATION_GUIDE.md,SECURITY_SETUP.md",
       "firebase.json": "firebase-debug.log,firebase/config.js,firebase/firestore.rules,firebase/storage.rules,firebase/remoteconfig.json",
@@ -49,10 +49,14 @@
     },
     "cSpell.words": [
       "firebaserc",
+      "firestore",
+      "funders",
+      "keytar",
       "lastmod",
       "Lockard",
       "Microsite",
       "recaptcha",
+      "remoteconfig",
       "urlset"
     ]
   },

@@ -94,6 +94,47 @@ a {
   font-size: 1.05rem;
 }
 
+/* Make navigation text explicitly visible.
+   Some themes or animations can temporarily set text-fill or opacity
+   which makes nav text appear transparent. Force a readable color
+   and reset text-fill/opacity to ensure the label is always visible. */
+.nav,
+.nav .nav-logo,
+.nav .nav-name,
+.nav .nav-links a,
+.nav .nav-cta a {
+  color: var(--text-color) !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Dark nav variant: use when the nav background is a dark surface
+   (e.g., .nav.dark or when JS toggles a dark header). This ensures
+   sufficient contrast for nav text and links. */
+.nav.dark,
+.nav.dark .nav-logo,
+.nav.dark .nav-name,
+.nav.dark .nav-links a,
+.nav.dark .nav-cta a {
+  color: var(--neutral-0) !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* If the site is using the dynamic-theme dark-mode variables, adapt the nav
+   automatically so the header contrasts when `.dark-mode` is placed on a
+   parent (for example <body class="dark-mode">). */
+.dark-mode .nav {
+  background: rgba(12, 18, 35, 0.9);
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+.dark-mode .nav,
+.dark-mode .nav .nav-logo,
+.dark-mode .nav .nav-name,
+.dark-mode .nav .nav-links a,
+.dark-mode .nav .nav-cta a {
+  color: var(--neutral-0) !important;
+  -webkit-text-fill-color: initial !important;
+}
+
 .nav-icon {
   display: grid;
   place-items: center;
@@ -569,6 +610,31 @@ a {
 .section-head.light .section-intro,
 .section-head.light .eyebrow {
   color: rgba(255, 255, 255, 0.75);
+}
+
+/* When the section uses a light gradient background, prefer dark text for
+   headings and card content so they don't blend into the background. This
+   targets `.section-gradient` only to avoid breaking intended "light"
+   header usage on dark sections. */
+.section.section-gradient .section-head.light {
+  color: var(--text-color) !important;
+}
+.section.section-gradient .section-head.light .section-intro,
+.section.section-gradient .section-head.light .eyebrow {
+  color: var(--text-muted) !important;
+}
+
+/* Make the focus cards readable on the gradient background */
+.section.section-gradient .focus-card {
+  color: var(--text-color) !important;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(15, 23, 42, 0.06);
+}
+.section.section-gradient .focus-card p {
+  color: var(--text-muted) !important;
+}
+.section.section-gradient .focus-card footer {
+  color: rgba(15, 23, 42, 0.65) !important;
 }
 
 .eyebrow {
