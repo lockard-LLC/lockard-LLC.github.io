@@ -1,8 +1,111 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "name": "Lockard LLC Workspace",
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "files.eol": "\n",
+    "files.exclude": {
+      "**/.firebase/**": true,
+      "**/.firebase": true,
+      "**/.firebaserc.cache": true,
+      "**/node_modules": true,
+      "**/node_modules/**": true,
+      "**/yarn-error.log": true,
+      "firebase-debug.log": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+      "**/.firebase/**": true,
+      "**/.firebaserc.cache": true,
+      "**/node_modules/**": true
+    },
+    "json.schemas": [
+      {
+        "fileMatch": [
+          "/firebase.json"
+        ],
+        "url": "https://json.schemastore.org/firebase.json"
+      }
+    ],
+    "search.exclude": {
+      "**/.firebase/**": true,
+      "**/.firebaserc.cache": true,
+      "**/node_modules": true,
+      "**/node_modules/**": true
+    },
+    "cSpell.words": [
+      "firebaserc",
+      "Lockard",
+      "Microsite",
+      "recaptcha"
+    ]
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "firebase.vscode-firebase-explorer",
+      "streetsidesoftware.code-spell-checker"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Serve site (yarn dev)",
+        "type": "shell",
+        "command": "yarn dev",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        },
+        "detail": "Run Firebase hosting emulator for local preview",
+        "problemMatcher": []
+      },
+      {
+        "label": "Verify build placeholder",
+        "type": "shell",
+        "command": "yarn build",
+        "group": "build",
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        },
+        "detail": "No-op build command to confirm static site expectations",
+        "problemMatcher": []
+      },
+      {
+        "label": "Deploy hosting",
+        "type": "shell",
+        "command": "yarn deploy",
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        },
+        "detail": "Deploy hosting assets only after review",
+        "problemMatcher": []
+      },
+      {
+        "label": "Deploy all Firebase targets",
+        "type": "shell",
+        "command": "yarn deploy:all",
+        "presentation": {
+          "reveal": "always",
+          "panel": "shared"
+        },
+        "detail": "Push hosting, rules, and Remote Config together",
+        "problemMatcher": []
+      }
+    ]
+  }
 }
