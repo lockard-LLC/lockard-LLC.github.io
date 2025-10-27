@@ -764,6 +764,61 @@ a {
   font-weight: 500;
 }
 
+/* Accent bar and updated look for focus cards */
+.focus-card {
+  position: relative;
+  overflow: visible;
+}
+
+.focus-accent {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 6px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(53,107,255,0.95), rgba(124,92,255,0.95));
+  box-shadow: 0 6px 24px rgba(53,107,255,0.08);
+  transform-origin: left center;
+}
+
+.focus-card header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.focus-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));
+  color: var(--primary-dark);
+  font-size: 1.35rem;
+  box-shadow: 0 8px 28px rgba(15,23,42,0.12);
+  transform: translateZ(0);
+}
+
+.focus-card .focus-small {
+  margin: 0.15rem 0 0;
+  color: rgba(15,23,42,0.75);
+  font-size: 0.98rem;
+}
+
+.focus-card:hover .focus-accent {
+  transform: scaleY(1.02);
+}
+
+.focus-card:hover {
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 0 36px 80px rgba(15, 23, 42, 0.24);
+}
+
+/* Make sure reveal animations respect CSS delay var */
+.reveal { animation-delay: var(--delay, 0s); }
+
 .principle-grid {
   display: grid;
   gap: 1.5rem;

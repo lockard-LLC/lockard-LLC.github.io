@@ -84,6 +84,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Focus card icon flourish when revealed
+    const focusCards = gsap.utils.toArray('.focus-card');
+    focusCards.forEach((card, i) => {
+        const icon = card.querySelector('.focus-icon');
+        gsap.fromTo(icon || {},
+            { y: -6, rotation: -6, scale: 0.92, opacity: 0 },
+            {
+                y: 0,
+                rotation: 0,
+                scale: 1,
+                opacity: 1,
+                duration: 0.9,
+                ease: 'elastic.out(1, 0.7)',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 92%',
+                    toggleActions: 'play none none none'
+                },
+                delay: i * 0.06
+            }
+        );
+    });
+
     // --- MICRO-INTERACTIONS ---
     // Card hover effect
     const hoverCards = gsap.utils.toArray('.card, .focus-card, .principle-card, .preview-card');
