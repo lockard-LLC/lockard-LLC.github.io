@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Animate cards on scroll
-    const cards = gsap.utils.toArray('.card, .focus-card, .principle-card');
+    const cards = gsap.utils.toArray('.card, .focus-card, .principle-card, .paw-card');
     cards.forEach(card => {
         gsap.from(card, {
             scrollTrigger: {
@@ -107,9 +107,63 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     });
 
+    // SafePaws stat list animation
+    const safepawsStats = gsap.utils.toArray('.safepaws-stats li');
+    safepawsStats.forEach((item, i) => {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 95%'
+            },
+            x: -24,
+            opacity: 0,
+            duration: 0.7,
+            ease: 'power2.out',
+            delay: (i % 3) * 0.08
+        });
+    });
+
+    // SafePaws cards animations
+    const pawCards = gsap.utils.toArray('.paw-card');
+    pawCards.forEach((card, i) => {
+        const icon = card.querySelector('.paw-icon');
+        const highlights = card.querySelectorAll('.paw-highlights li');
+
+        if (icon) {
+            gsap.from(icon, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 90%'
+                },
+                y: 18,
+                scale: 0.85,
+                rotation: -6,
+                opacity: 0,
+                duration: 0.85,
+                ease: 'back.out(1.6)',
+                delay: i * 0.06
+            });
+        }
+
+        if (highlights.length) {
+            gsap.from(highlights, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 88%'
+                },
+                opacity: 0,
+                y: 12,
+                stagger: 0.08,
+                duration: 0.6,
+                ease: 'power2.out',
+                delay: 0.2
+            });
+        }
+    });
+
     // --- MICRO-INTERACTIONS ---
     // Card hover effect
-    const hoverCards = gsap.utils.toArray('.card, .focus-card, .principle-card, .preview-card');
+    const hoverCards = gsap.utils.toArray('.card, .focus-card, .principle-card, .preview-card, .paw-card');
     hoverCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
             gsap.to(card, {

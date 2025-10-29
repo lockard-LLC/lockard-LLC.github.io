@@ -1,10 +1,11 @@
-## ⚠️ **CRITICAL: API Key Security**
+# ⚠️ **CRITICAL: API Key Security**
 
 Your Firebase API key was exposed in the repository. Follow these steps immediately:
 
-### 🚨 **Immediate Actions Required**
+## 🚨 **Immediate Actions Required**
 
-#### **1. Rotate Your Firebase API Key**
+### **1. Rotate Your Firebase API Key**
+
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Select your project: `lockard-llc-business`
 3. Go to **Project Settings** → **General**
@@ -12,13 +13,15 @@ Your Firebase API key was exposed in the repository. Follow these steps immediat
 5. Click **"Regenerate key"** to create a new API key
 6. **Delete the old key** from the console
 
-#### **2. Revoke the Exposed Key**
+### **2. Revoke the Exposed Key**
+
 1. In Firebase Console → **Project Settings** → **General**
 2. Find the exposed key: `AIzaSyCG4J9t8rs3zgoKJBbHcaq1cvvMMy4u2-I`
 3. **Delete this key immediately**
 4. Create a new API key for your project
 
 #### **3. Check for Unauthorized Access**
+
 1. Go to **Firebase Console** → **Authentication** → **Users**
 2. Check for any suspicious user accounts
 3. Review **Firebase Console** → **Analytics** → **Events** for unusual activity
@@ -27,6 +30,7 @@ Your Firebase API key was exposed in the repository. Follow these steps immediat
 ### 🛡️ **Secure Configuration Setup**
 
 #### **Environment Variables (Recommended)**
+
 Create a `.env` file in your project root (NEVER commit this file):
 
 ```bash
@@ -41,6 +45,7 @@ FIREBASE_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
 #### **Firebase App Check (Recommended)**
+
 1. Enable **Firebase App Check** in your Firebase Console
 2. Add your domain to the allowed origins
 3. This prevents unauthorized API usage
@@ -72,12 +77,14 @@ window.__FIREBASE_CONFIG__ = {
 ### 🚀 **Production Deployment**
 
 #### **For Production:**
+
 1. **Never commit** `.env` files
 2. **Use environment variables** in your hosting platform
 3. **Enable Firebase App Check** for additional security
 4. **Monitor usage** in Firebase Console
 
 #### **For Development:**
+
 1. Create `.env` file locally with your real credentials
 2. Add `.env` to `.gitignore` (already done)
 3. Use placeholder values in committed files
@@ -85,11 +92,13 @@ window.__FIREBASE_CONFIG__ = {
 ### 🔍 **Monitoring & Alerts**
 
 #### **Set up Monitoring:**
+
 1. **Firebase Console** → **Analytics** → **Events**
 2. **Firebase Console** → **Firestore** → **Usage**
 3. **Firebase Console** → **Authentication** → **Users**
 
 #### **Security Alerts:**
+
 - Monitor for unusual API usage
 - Check for unexpected user registrations
 - Review Firestore data access patterns

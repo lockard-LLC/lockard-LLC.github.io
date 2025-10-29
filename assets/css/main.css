@@ -819,6 +819,268 @@ a {
 /* Make sure reveal animations respect CSS delay var */
 .reveal { animation-delay: var(--delay, 0s); }
 
+/* SafePaws section */
+.section-night {
+  background: radial-gradient(140% 140% at 10% 10%, rgba(87, 228, 255, 0.18) 0%, rgba(36, 56, 120, 0.35) 40%, rgba(7, 11, 24, 0.95) 100%);
+  color: var(--neutral-0);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-night .section-title,
+.section-night .eyebrow,
+.section-night .section-intro,
+.section-night .section-copy {
+  color: var(--neutral-0);
+}
+
+.safepaws-atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  filter: blur(0);
+}
+
+.paw-glow {
+  position: absolute;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0.38;
+  filter: blur(0);
+  animation: pawGlow 18s ease-in-out infinite;
+}
+
+.paw-glow-one {
+  width: 420px;
+  height: 420px;
+  top: -80px;
+  left: -120px;
+  background: radial-gradient(circle at center, rgba(124, 92, 255, 0.55), transparent 70%);
+}
+
+.paw-glow-two {
+  width: 360px;
+  height: 360px;
+  bottom: -140px;
+  right: 5%;
+  background: radial-gradient(circle at center, rgba(87, 228, 255, 0.5), transparent 70%);
+  animation-delay: -6s;
+}
+
+.paw-glow-three {
+  width: 280px;
+  height: 280px;
+  top: 30%;
+  right: 55%;
+  background: radial-gradient(circle at center, rgba(53, 107, 255, 0.45), transparent 70%);
+  animation-delay: -12s;
+}
+
+@keyframes pawGlow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate3d(18px, -22px, 0) scale(1.08);
+    opacity: 0.55;
+  }
+}
+
+.safepaws-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: stretch;
+}
+
+.safepaws-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-right: clamp(0rem, 3vw, 1.5rem);
+}
+
+.safepaws-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(124, 92, 255, 0.18);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(124, 92, 255, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.section-copy {
+  margin: 0;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 36rem;
+}
+
+.safepaws-stats {
+  list-style: none;
+  margin: 2rem 0 1.8rem;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.safepaws-stats li {
+  padding: 1.1rem 1.3rem;
+  border-radius: var(--radius-md);
+  background: rgba(17, 26, 52, 0.75);
+  border: 1px solid rgba(124, 92, 255, 0.28);
+  box-shadow: 0 18px 32px rgba(5, 11, 24, 0.35);
+  backdrop-filter: blur(18px);
+}
+
+.stat-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 0.35rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.safepaws-note {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-md);
+  background: rgba(53, 107, 255, 0.16);
+  border: 1px solid rgba(53, 107, 255, 0.25);
+  max-width: 32rem;
+}
+
+.safepaws-features {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+}
+
+.paw-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 1.9rem;
+  background: rgba(18, 28, 58, 0.92);
+  border: 1px solid rgba(124, 92, 255, 0.35);
+  box-shadow: 0 26px 46px rgba(3, 8, 20, 0.42);
+  backdrop-filter: blur(28px);
+  color: var(--neutral-0);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.paw-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(124, 92, 255, 0.65);
+  box-shadow: 0 36px 72px rgba(4, 10, 24, 0.5);
+}
+
+.paw-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(124, 92, 255, 0.25));
+  color: var(--primary-dark);
+  box-shadow: 0 16px 36px rgba(124, 92, 255, 0.22);
+}
+
+.paw-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.paw-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.paw-highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.paw-highlights li {
+  position: relative;
+  padding-inline-start: 1.4rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.paw-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0.3rem;
+  top: 0.45rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: rgba(87, 228, 255, 0.85);
+  box-shadow: 0 0 12px rgba(87, 228, 255, 0.65);
+}
+
+.safepaws-cta {
+  grid-column: span 2;
+  border-radius: var(--radius-lg);
+  padding: clamp(1.6rem, 2vw, 2rem);
+  background: linear-gradient(135deg, rgba(124, 92, 255, 0.38), rgba(53, 107, 255, 0.24));
+  border: 1px solid rgba(124, 92, 255, 0.45);
+  color: var(--neutral-0);
+  box-shadow: 0 30px 56px rgba(5, 11, 24, 0.48);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  backdrop-filter: blur(28px);
+}
+
+.safepaws-cta .btn-primary {
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: var(--neutral-0);
+  box-shadow: 0 18px 36px rgba(5, 11, 24, 0.35);
+}
+
+.cta-eyebrow {
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.safepaws-cta p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1rem;
+}
+
 .principle-grid {
   display: grid;
   gap: 1.5rem;
@@ -1081,6 +1343,22 @@ a {
     left: auto;
     bottom: auto;
   }
+
+  .safepaws-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .safepaws-intro {
+    padding-right: 0;
+  }
+
+  .safepaws-features {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .safepaws-cta {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1114,6 +1392,10 @@ a {
 
   .contact-action {
     justify-content: flex-start;
+  }
+
+  .safepaws-stats {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1149,5 +1431,14 @@ a {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.2rem;
+  }
+
+  .safepaws-features {
+    grid-template-columns: 1fr;
+  }
+
+  .paw-card,
+  .safepaws-cta {
+    padding: 1.5rem;
   }
 }

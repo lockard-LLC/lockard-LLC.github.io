@@ -1,326 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lockard LLC · Documentation Portal</title>
-    <meta name="description" content="Comprehensive documentation for Lockard LLC's technology infrastructure including reCAPTCHA Enterprise and Firebase hosting.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdknvUrAAAAAO500OXCitu8If6AfVn3ytIsmDIr"></script>
-    <style>
-        :root {
-            color-scheme: light dark;
-            --primary-blue: #38bdf8;
-            --primary-purple: #a855f7;
-            --primary-pink: #ec4899;
-            --bg-primary: #0f172a;
-            --bg-secondary: rgba(15, 23, 42, 0.75);
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5f5;
-            --text-muted: #94a3b8;
-            --border-color: rgba(148, 163, 184, 0.35);
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: radial-gradient(circle at 20% 30%, rgba(56, 189, 248, 0.15), transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.12), transparent 50%),
-                        radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.1), transparent 60%),
-                        var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .tagline {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-        
-        .tagline::before {
-            content: "🔧";
-            font-size: 1.1rem;
-        }
-        
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 700;
-            margin: 0 0 1rem 0;
-            background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .tech-stack {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .tech-card {
-            background: var(--bg-secondary);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tech-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
-        }
-        
-        .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border-color: var(--primary-blue);
-        }
-        
-        .tech-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tech-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-        
-        .tech-description {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .tech-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-        
-        .tech-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            padding: 0.5rem 0;
-        }
-        
-        .tech-link:hover {
-            color: var(--primary-purple);
-            transform: translateX(5px);
-        }
-        
-        .tech-link::before {
-            content: "→";
-            font-weight: 600;
-            transition: transform 0.2s ease;
-        }
-        
-        .tech-link:hover::before {
-            transform: translateX(3px);
-        }
-        
-        .quick-start {
-            background: var(--bg-secondary);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin-bottom: 3rem;
-        }
-        
-        .quick-start h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--text-primary);
-        }
-        
-        .code-block {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-            font-size: 0.9rem;
-            color: var(--text-primary);
-            overflow-x: auto;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-        }
-        
-        .footer a {
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .footer a:hover {
-            color: var(--primary-purple);
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .tech-stack {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .tech-card {
-                padding: 2rem;
-            }
-            
-            .quick-start {
-                padding: 2rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <title>Lockard LLC — Public Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Public partner documentation for Lockard LLC, including SafePaws program overview and onboarding guides." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <meta property="og:title" content="Lockard LLC — Public Documentation" />
+  <meta property="og:description" content="Partner docs, onboarding, and brand guidelines." />
+  <meta property="og:type" content="website" />
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="tagline">Lockard LLC · Documentation Portal</div>
-            <h1>Technology Infrastructure</h1>
-            <p class="subtitle">
-                Comprehensive guides, code examples, and best practices for our development ecosystem
-            </p>
-        </header>
-        
-        <section class="tech-stack">
-            <div class="tech-card">
-                <div class="tech-icon">🔐</div>
-                <h3 class="tech-title">reCAPTCHA Enterprise</h3>
-                <p class="tech-description">
-                    Advanced bot protection and security integration with Google reCAPTCHA Enterprise. 
-                    Complete implementation guides, code examples, and deployment procedures.
-                </p>
-                <div class="tech-links">
-                    <a href="recaptcha/README.md" class="tech-link">Complete Implementation Guide</a>
-                    <a href="recaptcha/RECAPTCHA_SETUP.md" class="tech-link">Frontend Setup</a>
-                    <a href="recaptcha/SERVER_RECAPTCHA_SETUP.md" class="tech-link">Backend Integration</a>
-                    <a href="recaptcha/DEBUG_TOKEN_GUIDE.md" class="tech-link">Debug Token Guide</a>
-                </div>
-            </div>
-            
-            <div class="tech-card">
-                <div class="tech-icon">🔥</div>
-                <h3 class="tech-title">Firebase Hosting</h3>
-                <p class="tech-description">
-                    Multi-site hosting configuration and deployment procedures. 
-                    Global CDN setup, custom domains, and production deployment workflows.
-                </p>
-                <div class="tech-links">
-                    <a href="firebase/FIREBASE_SETUP.md" class="tech-link">Firebase Setup Guide</a>
-                    <a href="firebase/DEPLOYMENT_GUIDE.md" class="tech-link">Deployment Procedures</a>
-                    <a href="firebase/MULTI_SITE_SETUP.md" class="tech-link">Multi-Site Configuration</a>
-                    <a href="firebase/PROJECT_SETUP.md" class="tech-link">Project Organization</a>
-                    <a href="ai-logic/README.md" class="tech-link">AI Logic Documentation</a>
-                    <a href="ai-logic/examples/ai-logic-demo.html" class="tech-link">Interactive AI Demo</a>
-                    <a href="analytics/README.md" class="tech-link">Analytics Documentation</a>
-                </div>
-            </div>
-        </section>
-        
-        <section class="quick-start">
-            <h2>🚀 Quick Start</h2>
-            <p>Get up and running with our technology stack:</p>
-            
-            <h3>Development</h3>
-            <div class="code-block">
-# Start local development server
-yarn dev
+  <header class="container">
+    <img src="/assets/logo-lockard.svg" alt="Lockard LLC" class="logo" />
+    <nav>
+      <a href="/guides/partner-onboarding.html">Partner Onboarding</a>
+      <a href="/programs/safepaws-overview.html">SafePaws</a>
+      <a href="/guides/brand-guidelines.html">Brand Guidelines</a>
+    </nav>
+  </header>
 
-# Start Firebase hosting locally
-firebase serve --only hosting
+  <main class="container">
+    <h1>Lockard LLC — Public Documentation</h1>
+    <p>Welcome. This site hosts public partner documentation for Lockard LLC programs.</p>
 
-# Start docs site specifically
-firebase serve --only hosting:docs
-            </div>
-            
-            <h3>Deployment</h3>
-            <div class="code-block">
-# Deploy main site only
-firebase deploy --only hosting:main
+    <section>
+      <h2>Start Here</h2>
+      <ul>
+        <li><a href="/guides/partner-onboarding.html">Partner Onboarding Guide</a></li>
+        <li><a href="/programs/safepaws-overview.html">SafePaws Program Overview</a></li>
+        <li><a href="/guides/brand-guidelines.html">Brand Guidelines</a></li>
+      </ul>
+    </section>
+  </main>
 
-# Deploy docs site only
-firebase deploy --only hosting:docs
-
-# Deploy everything
-yarn deploy:all
-            </div>
-        </section>
-        
-        <footer class="footer">
-            <p>
-                Need help? Contact us at <a href="mailto:hello@lockard.llc">hello@lockard.llc</a> 
-                or check our <a href="README.md">comprehensive documentation</a>.
-            </p>
-            <p>
-                <a href="ORGANIZATION_GUIDE.md">Organization Guide</a> • 
-                Built with ❤️ by Lockard LLC
-            </p>
-        </footer>
-    </div>
-    
-    <script src="../assets/js/recaptcha-enterprise.js" data-site-key="6LdknvUrAAAAAO500OXCitu8If6AfVn3ytIsmDIr"></script>
+  <footer class="container">
+    <p>© <span id="y"></span> Lockard LLC — <a href="https://lockard.llc">lockard.llc</a></p>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
