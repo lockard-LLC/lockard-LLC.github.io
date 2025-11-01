@@ -2,17 +2,11 @@
   "hosting": [
     {
       "site": "lockard-llc-business",
-      "public": ".",
+      "public": "src/lockard-llc",
       "ignore": [
         "firebase.json",
         "**/.*",
-        "!/.well-known/**",
-        "**/node_modules/**",
-        "docs/**",
-        "examples/**",
-        ".env*",
-        "README.md",
-        "functions/**"
+        "**/node_modules/**"
       ],
       "rewrites": [
         {
@@ -52,28 +46,16 @@
     },
     {
       "site": "lockard-llc-safepaws",
-      "public": ".",
+      "public": "src/safepaws-site",
       "ignore": [
         "firebase.json",
         "**/.*",
-        "**/node_modules/**",
-        ".env*",
-        "README.md",
-        "functions/**",
-        "index.html",
-        "docs/**",
-        "package.json",
-        "yarn.lock",
-        "lockard-LLC.github.io.code-workspace",
-        "AGENTS.md",
-        "SECURITY_SETUP.md",
-        "sitemap.xml",
-        "firebase-debug.log"
+        "**/node_modules/**"
       ],
       "rewrites": [
         {
           "source": "**",
-          "destination": "/safepaws/index.html"
+          "destination": "/index.html"
         }
       ],
       "headers": [
@@ -99,28 +81,16 @@
     },
     {
       "site": "lockard-llc-docs",
-      "public": ".",
+      "public": "src/docs-site",
       "ignore": [
         "firebase.json",
         "**/.*",
-        "**/node_modules/**",
-        ".env*",
-        "README.md",
-        "functions/**",
-        "index.html",
-        "safepaws/**",
-        "package.json",
-        "yarn.lock",
-        "lockard-LLC.github.io.code-workspace",
-        "AGENTS.md",
-        "SECURITY_SETUP.md",
-        "sitemap.xml",
-        "firebase-debug.log"
+        "**/node_modules/**"
       ],
       "rewrites": [
         {
           "source": "**",
-          "destination": "/docs/index.html"
+          "destination": "/index.html"
         }
       ],
       "headers": [
@@ -146,18 +116,18 @@
     }
   ],
   "storage": {
-    "rules": "firebase/storage.rules"
+    "rules": "backend/firebase/storage.rules"
   },
   "remoteconfig": {
-    "template": "firebase/remoteconfig.json"
+    "template": "backend/firebase/remoteconfig.json"
   },
   "firestore": {
     "database": "lockard-db",
-    "rules": "firebase/firestore.rules",
-    "indexes": "firebase/firestore.indexes.json"
+    "rules": "backend/firebase/firestore.rules",
+    "indexes": "backend/firebase/firestore.indexes.json"
   },
   "ai": {
-    "rules": "firebase/ai.rules"
+    "rules": "backend/firebase/ai.rules"
   },
   "emulators": {
     "hosting": {

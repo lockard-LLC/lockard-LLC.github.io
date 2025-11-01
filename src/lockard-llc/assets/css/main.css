@@ -406,9 +406,9 @@ a {
   width: 0.65rem;
   height: 0.65rem;
   border-radius: 50%;
-  background: #34d399;
+  background: var(--accent);
   position: relative;
-  box-shadow: 0 0 16px rgba(52, 211, 153, 0.6);
+  box-shadow: 0 0 16px rgba(87, 228, 255, 0.55);
 }
 
 .status-dot::after {
@@ -416,7 +416,7 @@ a {
   position: absolute;
   inset: -0.55rem;
   border-radius: inherit;
-  background: rgba(52, 211, 153, 0.2);
+  background: rgba(87, 228, 255, 0.2);
   animation: pulse 3s ease-in-out infinite;
 }
 

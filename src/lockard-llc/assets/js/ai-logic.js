@@ -326,7 +326,7 @@ function createAIModal(title, description) {
             width: 40px;
             height: 40px;
             border: 3px solid var(--border-color, rgba(148, 163, 184, 0.35));
-            border-top: 3px solid var(--primary-blue, #38bdf8);
+            border-top: 3px solid var(--accent, #57e4ff);
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin: 0 auto 1rem;
@@ -359,7 +359,7 @@ function createAIModal(title, description) {
         }
         
         .btn-copy, .btn-close {
-            background: linear-gradient(135deg, var(--primary-blue, #38bdf8), var(--primary-purple, #a855f7));
+            background: linear-gradient(135deg, var(--primary, #356bff), var(--secondary, #7c5cff));
             color: white;
             border: none;
             padding: 0.5rem 1rem;
@@ -377,9 +377,9 @@ function createAIModal(title, description) {
         }
         
         .btn-ai-suggestion, .btn-ai-enhancement, .btn-ai-insights {
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            color: var(--primary-blue, #38bdf8);
+            background: rgba(87, 228, 255, 0.12);
+            border: 1px solid rgba(87, 228, 255, 0.35);
+            color: var(--accent, #57e4ff);
             padding: 0.5rem 1rem;
             border-radius: 6px;
             cursor: pointer;
@@ -392,7 +392,7 @@ function createAIModal(title, description) {
         }
         
         .btn-ai-suggestion:hover, .btn-ai-enhancement:hover, .btn-ai-insights:hover {
-            background: rgba(56, 189, 248, 0.2);
+            background: rgba(87, 228, 255, 0.22);
             transform: translateY(-1px);
         }
     `;

@@ -17,19 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add scroll effect to navigation
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('.nav');
-        if (nav) {
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(255, 255, 255, 0.98)';
-                nav.style.borderBottom = '1px solid rgba(0, 0, 0, 0.1)';
-            } else {
-                nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                nav.style.borderBottom = '1px solid var(--gray-100)';
-            }
+    // Add scroll effect to navigation using theme tokens
+    const nav = document.querySelector('.nav');
+    const handleNavScrollState = () => {
+        if (!nav) return;
+        if (window.scrollY > 100) {
+            nav.classList.add('is-scrolled');
+        } else {
+            nav.classList.remove('is-scrolled');
         }
-    });
+    };
+    handleNavScrollState();
+    window.addEventListener('scroll', handleNavScrollState);
 
     // Mobile menu toggle (for future implementation)
     const mobileMenuButton = document.querySelector('.mobile-menu-button');

@@ -12,21 +12,21 @@
   "parameters": {
     "primary_color": {
       "defaultValue": {
-        "value": "#6366f1"
+        "value": "#356bff"
       },
       "description": "Primary brand color for the website",
       "valueType": "STRING"
     },
     "secondary_color": {
       "defaultValue": {
-        "value": "#8b5cf6"
+        "value": "#7c5cff"
       },
       "description": "Secondary brand color",
       "valueType": "STRING"
     },
     "accent_color": {
       "defaultValue": {
-        "value": "#22c55e"
+        "value": "#57e4ff"
       },
       "description": "Accent color for highlights and CTAs",
       "valueType": "STRING"
