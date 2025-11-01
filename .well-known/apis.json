@@ -1,0 +1,39 @@
+{
+  "name": "Lockard LLC APIs",
+  "description": "API specifications for Lockard LLC services",
+  "version": "1.0.0",
+  "url": "https://lockard-llc.github.io/.well-known/apis.json",
+  "apis": [
+    {
+      "name": "Lockard LLC Public API",
+      "description": "Public API endpoints for Lockard LLC services",
+      "humanURL": "https://lockard-llc.github.io/docs",
+      "baseURL": "https://lockard-llc.github.io/api",
+      "properties": [
+        {
+          "type": "X-OpenAPI",
+          "url": "https://lockard-llc.github.io/docs/postman/schemas/openapi.yaml"
+        },
+        {
+          "type": "X-Postman",
+          "url": "https://lockard-llc.github.io/.well-known/postman.json"
+        },
+        {
+          "type": "X-Documentation",
+          "url": "https://lockard-llc.github.io/docs"
+        },
+        {
+          "type": "X-Quickstart",
+          "url": "https://lockard-llc.github.io/docs/postman/"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Lockard LLC",
+      "email": "support@lockard-llc.com",
+      "url": "https://lockard-llc.github.io"
+    }
+  ]
+}

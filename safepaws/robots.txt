@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://safepaws.lockard.llc/sitemap.xml

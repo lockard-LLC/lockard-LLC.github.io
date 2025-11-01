@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Integration Quick Start — Lockard LLC Docs</title>
+  <meta name="description"
+        content="Connect Postman to Lockard LLC discovery assets with ready-to-use schemas, helper scripts, and reference commands." />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/dynamic-theme.css" />
+  <link rel="stylesheet" href="/assets/css/microsites.css" />
+</head>
+<body class="dynamic-layout dynamic-typography docs-site">
+  <nav class="nav glass-nav">
+    <div class="nav-container">
+      <a class="nav-logo" href="/" aria-label="Lockard LLC documentation home">
+        <span class="nav-icon">✶</span>
+        <span class="nav-name">Lockard Docs</span>
+        <span class="nav-tag">@docs</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Overview</a>
+        <a href="/#resources">Resources</a>
+        <a href="/guides/partner-onboarding.html">Partner Onboarding</a>
+        <a href="/programs/safepaws-overview.html">SafePaws</a>
+        <a href="/postman/" aria-current="page">API Quick Start</a>
+        <a href="/guides/brand-guidelines.html">Brand Guidelines</a>
+      </div>
+      <div class="nav-cta">
+        <a href="https://lockard-llc.github.io/.well-known/apis.json" class="btn btn-primary">View APIs.json</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero hero-subpage">
+      <div class="hero-atmosphere" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">API</div>
+          <h1 class="hero-title">Postman quick start</h1>
+          <p class="hero-description">
+            Connect Postman to the Lockard LLC API discovery assets, validate your setup, and keep
+            collections in sync with our OpenAPI schema.
+          </p>
+          <div class="hero-actions">
+            <a href="https://lockard-llc.github.io/.well-known/apis.json" class="btn btn-primary">
+              Open APIs.json
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </a>
+            <a href="./schemas/openapi.yaml" class="btn btn-ghost">Download schema</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-label">Schema version</span>
+              <span class="metric-value">OpenAPI 3.0 · Updated alongside documentation pushes.</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Helper tooling</span>
+              <span class="metric-value">CLI script validates keys, workspaces, and collection structure.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light microsite-section" id="integration">
+      <div class="container docs-content-grid">
+        <div class="docs-rich-text">
+          <h2>Configuration summary</h2>
+          <table aria-label="Postman configuration values">
+            <thead>
+              <tr>
+                <th scope="col">Field</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>API Schema Root File</strong></td>
+                <td><code>docs/postman/schemas/openapi.yaml</code></td>
+              </tr>
+              <tr>
+                <td><strong>Collection Directory</strong></td>
+                <td><code>docs/postman/collections/</code></td>
+              </tr>
+              <tr>
+                <td><strong>Schema Type</strong></td>
+                <td>OpenAPI 3.0</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Get your API key</h2>
+          <ol>
+            <li>Visit <a href="https://go.postman.co/settings/me/api-keys">Postman API keys</a>.</li>
+            <li>Generate a key and copy the value (format: <code>PMAK-…</code>).</li>
+            <li>Create <code>.env</code> from <code>.env.example</code> and add:
+              <pre><code>POSTMAN_API_KEY=PMAK-your-key-here</code></pre>
+            </li>
+          </ol>
+
+          <h2>Run the setup helper</h2>
+          <p>Install dependencies and execute the helper script from the repository root:</p>
+          <pre><code>yarn install
+yarn postman:setup
+# or
+npm install
+npm run postman:setup</code></pre>
+          <p>The helper verifies your API key, lists available workspaces, and summarizes the configuration files that ship with this repo.</p>
+
+          <h2>Import into Postman</h2>
+          <h3>Option A — Postman Web UI</h3>
+          <ol>
+            <li>Open <a href="https://web.postman.co">Postman</a> and go to <em>APIs → Create API → Import</em>.</li>
+            <li>Select <em>File</em> and choose <code>docs/postman/schemas/openapi.yaml</code>.</li>
+            <li>Set the collection directory to <code>docs/postman/collections/</code> and click <em>Import</em>.</li>
+          </ol>
+          <h3>Option B — Git integration</h3>
+          <ol>
+            <li>In Postman, choose <em>APIs → Create API → Connect Repository</em>.</li>
+            <li>Connect to GitHub and select the <code>main</code> branch.</li>
+            <li>Set the root file to <code>docs/postman/schemas/openapi.yaml</code> and the collection directory to <code>docs/postman/collections/</code>.</li>
+          </ol>
+
+          <h2>Discovery endpoints</h2>
+          <ul>
+            <li><strong>APIs.json:</strong> <a href="https://lockard-llc.github.io/.well-known/apis.json">/.well-known/apis.json</a></li>
+            <li><strong>OpenAPI schema:</strong> <a href="https://lockard-llc.github.io/docs/postman/schemas/openapi.yaml">docs/postman/schemas/openapi.yaml</a></li>
+            <li><strong>Postman collection:</strong> <a href="https://lockard-llc.github.io/.well-known/postman.json">/.well-known/postman.json</a></li>
+          </ul>
+
+          <h2>Reference commands</h2>
+          <pre><code># Validate .well-known catalog
+yarn wellknown:validate
+
+# Postman helper
+yarn postman:setup
+
+# Local preview
+yarn dev
+
+# Deploy hosting artifacts
+yarn deploy</code></pre>
+
+          <h2>Schema features</h2>
+          <ul>
+            <li><strong>✅ Health check endpoint</strong> (<code>/health</code>)</li>
+            <li><strong>✅ Authentication flow</strong> (<code>/auth/login</code>)</li>
+            <li><strong>✅ User management</strong> (<code>/users</code>) with pagination helpers</li>
+            <li><strong>✅ API key &amp; JWT security schemes</strong> ready to wire up</li>
+          </ul>
+
+          <h2>Customize the API</h2>
+          <p>Add an endpoint in <code>docs/postman/schemas/openapi.yaml</code>:</p>
+          <pre><code>paths:
+  /your-endpoint:
+    get:
+      summary: Your endpoint description
+      responses:
+        '200':
+          description: Success response</code></pre>
+          <p>Model new data structures under <code>components.schemas</code> and extend <code>components.securitySchemes</code> to register additional auth strategies.</p>
+
+          <h2>Troubleshooting</h2>
+          <ul>
+            <li><strong>API key errors?</strong> Confirm <code>POSTMAN_API_KEY</code> is present in <code>.env</code>.</li>
+            <li><strong>Collections missing?</strong> Verify the directory is set to <code>docs/postman/collections/</code>.</li>
+            <li><strong>Schema updates?</strong> Re-run <code>yarn postman:setup</code> after editing <code>openapi.yaml</code>.</li>
+          </ul>
+
+          <h2>Additional resources</h2>
+          <ul>
+            <li><a href="./README.md">Repository-level Postman README</a></li>
+            <li><a href="./schemas/README.md">Schema notes</a></li>
+            <li><a href="https://learning.postman.com/docs/developer/intro-api/">Postman API docs</a></li>
+            <li><a href="https://swagger.io/specification/">OpenAPI 3.0 spec</a></li>
+          </ul>
+
+          <h2>Need help?</h2>
+          <p>Email <a href="mailto:support@lockard-llc.com">support@lockard-llc.com</a> or review <code>/.well-known/security.txt</code> for contact details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Lockard LLC Docs</h3>
+          <p>© <span id="docsYear"></span> Lockard LLC · Documentation that mirrors the studio experience.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/">Overview</a>
+          <a href="/#resources">Resources</a>
+          <a href="/programs/safepaws-overview.html">SafePaws</a>
+          <a href="/postman/">API Quick Start</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="/firebase/config.js"></script>
+  <script src="/assets/js/recaptcha-enterprise.js"></script>
+  <script src="/assets/js/ai-logic.js"></script>
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.getElementById('docsYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

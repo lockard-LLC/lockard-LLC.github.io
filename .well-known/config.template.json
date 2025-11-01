@@ -1,0 +1,16 @@
+{
+  "postman": {
+    "apiKey": "PMAK-your-api-key-here",
+    "workspaceId": "your-workspace-id",
+    "collectionId": "your-collection-id"
+  },
+  "firebase": {
+    "apiKey": "your-firebase-api-key",
+    "projectId": "lockard-llc-business"
+  },
+  "environment": "production",
+  "features": {
+    "apiDiscovery": true,
+    "securityTxt": true
+  }
+}

@@ -1,35 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Brand Guidelines (Public) — Lockard LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Public-facing brand usage guidelines for Lockard LLC." />
-  <link rel="stylesheet" href="/assets/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Guidelines — Lockard LLC Docs</title>
+  <meta name="description"
+        content="Protect the Lockard LLC identity with accessible color usage, spacing guidance, and co-branding guardrails." />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/dynamic-theme.css" />
+  <link rel="stylesheet" href="/assets/css/microsites.css" />
 </head>
-<body>
-  <header class="container">
-    <a href="/" aria-label="Lockard LLC documentation home">
-      <img src="/assets/logo-lockard.svg" alt="Lockard LLC" class="logo" />
-    </a>
-    <nav>
-      <a href="/guides/partner-onboarding.html">Partner Onboarding</a>
-      <a href="/programs/safepaws-overview.html">SafePaws</a>
-      <a href="/guides/brand-guidelines.html" aria-current="page">Brand Guidelines</a>
-    </nav>
-  </header>
-  <main class="container">
-    <h1>Brand Guidelines (Public)</h1>
-    <p>Use logos and brand assets respectfully and consistently.</p>
-    <ul>
-      <li>Do not alter colors or proportions.</li>
-      <li>Provide clear space around the logo.</li>
-      <li>For press kits, contact the media email on the company site.</li>
-    </ul>
+<body class="dynamic-layout dynamic-typography docs-site">
+  <nav class="nav glass-nav">
+    <div class="nav-container">
+      <a class="nav-logo" href="/" aria-label="Lockard LLC documentation home">
+        <span class="nav-icon">✶</span>
+        <span class="nav-name">Lockard Docs</span>
+        <span class="nav-tag">@docs</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Overview</a>
+        <a href="/#resources">Resources</a>
+        <a href="/guides/partner-onboarding.html">Partner Onboarding</a>
+        <a href="/programs/safepaws-overview.html">SafePaws</a>
+        <a href="/postman/">API Quick Start</a>
+        <a href="/guides/brand-guidelines.html" aria-current="page">Brand Guidelines</a>
+      </div>
+      <div class="nav-cta">
+        <a href="mailto:media@lockard.llc" class="btn btn-primary">Request Assets</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero hero-subpage">
+      <div class="hero-atmosphere" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">Guide</div>
+          <h1 class="hero-title">Brand guidelines (public)</h1>
+          <p class="hero-description">
+            Protect the Lockard LLC identity with consistent color usage, spacing, and attribution that
+            mirrors how the studio presents itself across survivor-first work.
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:media@lockard.llc" class="btn btn-primary">
+              Request vector assets
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </a>
+            <a href="/" class="btn btn-ghost">Return to overview</a>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-label">Core palette</span>
+              <span class="metric-value">Inspired by SafePaws and Lockard LLC gradients for consistent contrast.</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Files on request</span>
+              <span class="metric-value">SVG / EPS lockups, typography kits, and co-branding templates.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light microsite-section" id="guidelines">
+      <div class="container docs-content-grid">
+        <div class="docs-rich-text">
+          <h2>Core principles</h2>
+          <ul>
+            <li>Do not distort or recolor the Lockard LLC logo or SafePaws lockup.</li>
+            <li>Maintain generous clear space: at least the height of the “L” on all sides.</li>
+            <li>Pair Lockard LLC with mission-first language; avoid marketing jargon that dilutes survivor trust.</li>
+          </ul>
+
+          <h2>Color palette</h2>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Usage</th>
+                <th scope="col">Hex</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Primary</td>
+                <td><code>#356BFF</code></td>
+                <td>Headers, primary call-to-action buttons, and navigation accents.</td>
+              </tr>
+              <tr>
+                <td>Secondary</td>
+                <td><code>#7C5CFF</code></td>
+                <td>Alternate pill accents, gradients, and SafePaws spot illustrations.</td>
+              </tr>
+              <tr>
+                <td>Neutral</td>
+                <td><code>#0F172A</code></td>
+                <td>Body copy and accessibility-safe text on light backgrounds.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Typography</h2>
+          <p>Use the Inter family—weights 400, 500, 600, and 700—for all digital and print materials. Avoid substituting with system fonts unless you are preparing a template for localization.</p>
+
+          <h2>File requests</h2>
+          <p>Need vector assets or co-branding templates? Email <a href="mailto:media@lockard.llc">media@lockard.llc</a> with your project context and timeline.</p>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="container">
-    <p>© <span id="y"></span> Lockard LLC — <a href="https://lockard.llc">lockard.llc</a></p>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Lockard LLC Docs</h3>
+          <p>© <span id="docsYear"></span> Lockard LLC · Documentation that mirrors the studio experience.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/">Overview</a>
+          <a href="/#resources">Resources</a>
+          <a href="/programs/safepaws-overview.html">SafePaws</a>
+          <a href="/postman/">API Quick Start</a>
+        </div>
+      </div>
+    </div>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="/firebase/config.js"></script>
+  <script src="/assets/js/recaptcha-enterprise.js"></script>
+  <script src="/assets/js/ai-logic.js"></script>
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.getElementById('docsYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

@@ -1,52 +1,150 @@
 {
-  "hosting": {
-    "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "docs/**",
-      "examples/**",
-      ".env*",
-      "README.md",
-      "functions/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
-    "headers": [
-      {
-        "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "*"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=7200"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(js|css)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=3600"
-          }
-        ]
-      }
-    ]
-  },
+  "hosting": [
+    {
+      "site": "lockard-llc-business",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "!/.well-known/**",
+        "**/node_modules/**",
+        "docs/**",
+        "examples/**",
+        ".env*",
+        "README.md",
+        "functions/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=7200"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=3600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "lockard-llc-safepaws",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        ".env*",
+        "README.md",
+        "functions/**",
+        "index.html",
+        "docs/**",
+        "package.json",
+        "yarn.lock",
+        "lockard-LLC.github.io.code-workspace",
+        "AGENTS.md",
+        "SECURITY_SETUP.md",
+        "sitemap.xml",
+        "firebase-debug.log"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/safepaws/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=7200"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=3600"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "site": "lockard-llc-docs",
+      "public": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        ".env*",
+        "README.md",
+        "functions/**",
+        "index.html",
+        "safepaws/**",
+        "package.json",
+        "yarn.lock",
+        "lockard-LLC.github.io.code-workspace",
+        "AGENTS.md",
+        "SECURITY_SETUP.md",
+        "sitemap.xml",
+        "firebase-debug.log"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/docs/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=7200"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=3600"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "storage": {
     "rules": "firebase/storage.rules"
   },

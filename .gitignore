@@ -334,3 +334,7 @@ env.template
 *api-key*
 *firebase-key*
 *google-key*
+
+# .well-known directory - ignore actual config files
+.well-known/config.json
+.well-known/*.local.json

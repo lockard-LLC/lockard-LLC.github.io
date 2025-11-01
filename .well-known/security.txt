@@ -1,0 +1,7 @@
+Contact: mailto:security@lockard-llc.com
+Expires: 2026-10-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://lockard-llc.github.io/.well-known/security.txt
+
+# Security Policy
+# For more information, see SECURITY.md in the root of this repository.

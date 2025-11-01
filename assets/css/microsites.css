@@ -1,0 +1,274 @@
+/* Microsite theme extensions for Lockard LLC subdomains */
+
+body.docs-site,
+body.safepaws-site {
+  background: linear-gradient(135deg, #f6f7ff 0%, #eef2ff 45%, #ffffff 100%);
+}
+
+.nav-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  background: rgba(53, 107, 255, 0.12);
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: 0.75rem;
+}
+
+.nav-links a[aria-current="page"],
+.nav-links a[data-active="true"] {
+  color: var(--primary);
+}
+
+.nav-links a[aria-current="page"]::after,
+.nav-links a[data-active="true"]::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero.hero-compact,
+.hero.hero-subpage {
+  min-height: auto;
+  padding: 7rem 0 4.5rem;
+}
+
+.hero.hero-compact .hero-grid,
+.hero.hero-subpage .hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero.hero-compact .hero-atmosphere .orb,
+.hero.hero-subpage .hero-atmosphere .orb {
+  width: 280px;
+  height: 280px;
+  opacity: 0.35;
+}
+
+.hero.hero-compact .hero-atmosphere .orb-three,
+.hero.hero-subpage .hero-atmosphere .orb-three {
+  display: none;
+}
+
+.hero-docs .hero-preview {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-docs .preview-card ul {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-docs .preview-card li strong {
+  font-size: 1.05rem;
+}
+
+.hero-docs .floating-pill {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+.microsite-section {
+  position: relative;
+}
+
+.microsite-section .section-head {
+  max-width: 760px;
+}
+
+.microsite-section .card-icon {
+  background: rgba(53, 107, 255, 0.16);
+  color: var(--primary);
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.card-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.docs-content-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.docs-rich-text {
+  background: var(--surface-strong);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 3vw, 3rem);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(24px);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.docs-rich-text > * {
+  margin: 0;
+}
+
+.docs-rich-text h2,
+.docs-rich-text h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-color);
+}
+
+.docs-rich-text h2 {
+  font-size: clamp(1.45rem, 2.8vw, 1.8rem);
+}
+
+.docs-rich-text h3 {
+  font-size: clamp(1.2rem, 2.4vw, 1.4rem);
+}
+
+.docs-rich-text p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.docs-rich-text ul,
+.docs-rich-text ol {
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.docs-rich-text li strong {
+  color: var(--text-color);
+}
+
+.docs-rich-text table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-soft);
+}
+
+.docs-rich-text thead {
+  background: linear-gradient(135deg, rgba(53, 107, 255, 0.14), rgba(124, 92, 255, 0.1));
+}
+
+.docs-rich-text th,
+.docs-rich-text td {
+  padding: 0.85rem 1.1rem;
+  text-align: left;
+  font-size: 0.98rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.docs-rich-text tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.docs-rich-text code {
+  font-family: 'Fira Code', 'Source Code Pro', 'Courier New', monospace;
+  background: rgba(15, 23, 42, 0.08);
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.docs-rich-text pre {
+  background: rgba(15, 23, 42, 0.92);
+  color: rgba(255, 255, 255, 0.88);
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-family: 'Fira Code', 'Source Code Pro', 'Courier New', monospace;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.2);
+}
+
+.docs-rich-text pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.docs-rich-text a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.docs-rich-text hr {
+  height: 1px;
+  border: none;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.docs-rich-text .note {
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--primary);
+  background: rgba(53, 107, 255, 0.12);
+  border-radius: 10px;
+  color: var(--text-muted);
+}
+
+.microsite-cta {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.microsite-cta .mini-card {
+  margin-top: 0;
+}
+
+.safe-partner-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.safe-partner-grid .card {
+  min-height: 100%;
+}
+
+@media (max-width: 900px) {
+  .nav-tag {
+    display: none;
+  }
+
+  .hero.hero-compact,
+  .hero.hero-subpage {
+    padding: 6rem 0 3.5rem;
+  }
+
+  .docs-rich-text {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero.hero-compact .hero-atmosphere .orb,
+  .hero.hero-subpage .hero-atmosphere .orb {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card-link {
+    margin-top: 1rem;
+  }
+
+  .docs-rich-text {
+    padding: 1.5rem;
+  }
+}

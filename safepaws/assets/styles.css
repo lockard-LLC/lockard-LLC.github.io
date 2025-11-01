@@ -1,5 +1,4 @@
-/* Legacy entrypoint: retain compatibility for older links.
-   Updated docs now load the shared Lockard LLC theme. */
+/* Legacy entrypoint for SafePaws microsite assets. */
 @import url("/assets/css/main.css");
 @import url("/assets/css/dynamic-theme.css");
 @import url("/assets/css/microsites.css");
